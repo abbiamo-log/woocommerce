@@ -24,6 +24,19 @@ if (!defined('ABSPATH')) {
 }
 
 class WooCommerceAbbiamo {
+  function init() {
+      define('ABBIAMO_FILE_PATH', plugin_dir_path(__FILE__));
+      // define('JADLOG_ROOT_URL', plugins_url('', __FILE__));
+
+      // add_action('admin_menu', array($this, 'add_export_tab'));
+      add_filter('woocommerce_settings_tabs_array',            array($this, 'add_settings_tab'), 50);
+      add_action('woocommerce_settings_tabs_abbiamo_shipping',  array($this, 'settings_tab'));
+      add_action('woocommerce_update_options_abbiamo_shipping', array($this, 'update_settings'));
+
+      require_once(ABBIAMO_FILE_PATH . '/vendor/autoload.php');
+      require_once(ABBIAMO_FILE_PATH . '/src/shipping/AbbiamologShippingMethod.php');
+  }
+
   function activate() {
     global $wp_version;
 
@@ -50,18 +63,6 @@ class WooCommerceAbbiamo {
 
   function deactivate() {
 
-  }
-
-  function init() {
-      // define('JADLOG_FILE_PATH', plugin_dir_path(__FILE__));
-      // define('JADLOG_ROOT_URL', plugins_url('', __FILE__));
-
-      // add_action('admin_menu', array($this, 'add_export_tab'));
-      add_filter('woocommerce_settings_tabs_array',            array($this, 'add_settings_tab'), 50);
-      add_action('woocommerce_settings_tabs_abbiamo_shipping',  array($this, 'settings_tab'));
-      add_action('woocommerce_update_options_abbiamo_shipping', array($this, 'update_settings'));
-
-      // require_once(JADLOG_FILE_PATH . '/classes/jadlogShippingInit.php');
   }
 
   public function add_settings_tab( $settings_tabs ) {
