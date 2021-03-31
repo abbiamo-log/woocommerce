@@ -1,4 +1,4 @@
-<?php
+<?
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
@@ -9,13 +9,15 @@ function abbiamolog_shipping_method_init() {
 	if ( ! class_exists( 'WC_Abbiamolog_Shipping_Method' ) ) {
 		class WC_Abbiamolog_Shipping_Method extends WC_Shipping_Method {
 
+			const METHOD_ID = 'ABBIAMOLOG';
+
 			/**
 			* Constructor.
 			*
 			* @param int $instance_id Instance ID.
 			*/
 			public function __construct( $instance_id = 0 ) {
-				$this->id                 = 'abbiamolog';
+				$this->id                 = self::METHOD_ID;
 				$this->instance_id        = absint( $instance_id );
 				$this->method_title       = 'Abbiamolog';
 				$this->method_description = 'Entregando emoções';
@@ -42,7 +44,7 @@ function abbiamolog_shipping_method_init() {
 			}
 
 			public function init_settings() {
-				$client = new Client(['base_uri' => 'https://o4z7rpd9qd.execute-api.us-east-1.amazonaws.com']);
+				$client = new Client(['base_uri' => get_option('wc_settings_tab_abbiamolog_token_url')]);
 				$response = $client->request('POST', '/prod/auth/gentoken', [
 					'body' => json_encode([
 						'username' => get_option('wc_settings_tab_abbiamolog_client_id'),
@@ -92,12 +94,13 @@ function abbiamolog_shipping_method_init() {
 				}
 
 				$cost = $this->calcule_abbiamo_shipping($postcode, $price, $weight);
-				if (is_null($amount)) {
+				if (is_null($cost)) {
 					return;
 				}
 
 				$this->add_rate(
 					array(
+						'id'			 => self::METHOD_ID,
 						'label'    => 'Abbiamo',
 						'cost'     => floatval( $cost / 100 ),
 						'calc_tax' => 'per_ordem',
@@ -114,7 +117,7 @@ function abbiamolog_shipping_method_init() {
 			* @return int|null
 			*/
 			private function calcule_abbiamo_shipping( $postcode, $price, $weight ) {
-				$client = new Client(['base_uri' => 'https://dlah3ejgyf.execute-api.us-east-1.amazonaws.com']);
+				$client = new Client(['base_uri' => get_option('wc_settings_tab_abbiamolog_shipping_url')]);
 
 				try {
 					$response = $client->request(
@@ -140,7 +143,7 @@ function abbiamolog_shipping_method_init() {
 	add_action( 'woocommerce_shipping_init', 'abbiamolog_shipping_method_init' );
 
 	function add_abbiamolog_shipping_method( $methods ) {
-		$methods['abbiamolog'] = 'WC_Abbiamolog_Shipping_Method';
+		$methods[WC_Abbiamolog_Shipping_Method::METHOD_ID] = 'WC_Abbiamolog_Shipping_Method';
 		return $methods;
 	}
 
