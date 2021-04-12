@@ -1,7 +1,7 @@
 <?
 
-use GuzzleHttp\Client;
-use GuzzleHttp\Exception\ClientException;
+use WooCommerce\Abbiamo\Http\AbbiamoHttpHandler;
+use WooCommerce\Abbiamo\Repository\AbbiamoRepository;
 
 /* Exit if accessed directly */
 if (!defined('ABSPATH')) {
@@ -15,19 +15,6 @@ if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
     */
     public function __construct( $order_id ) {
       $this->order = wc_get_order( $order_id );
-      $client = new Client(['base_uri' => get_option('wc_settings_tab_abbiamolog_token_url')]);
-      $response = $client->request('POST', '/prod/auth/gentoken', [
-        'body' => json_encode([
-          'username' => get_option('wc_settings_tab_abbiamolog_client_id'),
-          'password' => get_option('wc_settings_tab_abbiamolog_secret_key'),
-        ]),
-        'headers' => [
-          'Content-Type' => 'application/json',
-        ],
-      ]);
-      $response_body = json_decode((string) $response->getBody(), true);
-
-      $this->abbiammo_access_token = $response_body['access_token'];
     }
 
     public function create_abbiamo_invoice() {
@@ -37,26 +24,22 @@ if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
 
       $order_request = array(
         'invoice_number' => $this->order->get_order_number(),
-        'amount' => $this->get_total(),
+        'amount' => $this->get_total_amount(),
         'invoice_created_timestamp' => $this->order->get_date_created()->date('Y-m-d h:i:s'),
         'volumes' => [$this->get_volumes()],
         'customer' => $this->get_customer(),
-        'sender' => $this->get_sender(),
+        'seller' => $this->get_seller(),
         'origin_address' => $this->get_origin_address(),
         'destination_address' => $this->get_destination_address(),
       );
 
+      $abbiamo_handle = new AbbiamoHttpHandler();
+      $tracking = $abbiamo_handle->create_abbiamo_order($order_request);
+
       try {
-        $client = new Client(['base_uri' => get_option('wc_settings_tab_abbiamolog_order_url')]);
-        $response = $client->request('POST', '/prod/v1/order', [
-          'body' => json_encode($order_request),
-          'headers' => [
-            'Content-Type' => 'application/json',
-            'Authorization' => "Bearer {$this->abbiammo_access_token}",
-          ],
-        ]);
-        $response_body = json_decode((string) $response->getBody(), true);
-      } catch (ClientException $e) {
+        AbbiamoRepository::create( $this->order->get_order_number(), $tracking );
+      } catch (\Exception $e) {
+        wp_die($e->getMessage());
         return;
       }
     }
@@ -64,7 +47,7 @@ if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
     /**
     * @return int
     */
-    private function get_total() {
+    private function get_total_amount() {
       $total = 0;
 
       foreach ( $this->order->get_items() as $item ) {
@@ -153,7 +136,7 @@ if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
     /**
     * @return array
     */
-    private function get_sender() {
+    private function get_seller() {
       return [
         'email' => get_option('wc_settings_tab_abbiamolog_shop_email'),
         'phone' => get_option('wc_settings_tab_abbiamolog_shop_phone'),
@@ -183,5 +166,5 @@ if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
     $abbiamo_order->create_abbiamo_invoice();
   }
 
-  add_action('woocommerce_checkout_order_processed', 'wc_abbiamo_create_order');
+  add_action('woocommerce_payment_complete', 'wc_abbiamo_create_order');
 }
