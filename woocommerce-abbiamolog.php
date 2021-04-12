@@ -119,30 +119,6 @@ class WooCommerceAbbiamo {
               'default'  => '',
               'id'       => 'wc_settings_tab_abbiamolog_secret_key'
           ),
-          'ABBIAMOLOG_TOKEN_URL' => array(
-              'name'     => __('Endereço para gerar Token', 'abbiamo'),
-              'type'     => 'text',
-              'css'      => 'width:500px;',
-              'desc'     => '',
-              'default'  => '',
-              'id'       => 'wc_settings_tab_abbiamolog_token_url'
-          ),
-          'ABBIAMOLOG_ORDER_URL' => array(
-              'name'     => __('Endereço para gerar order', 'abbiamo'),
-              'type'     => 'text',
-              'css'      => 'width:500px;',
-              'desc'     => '',
-              'default'  => '',
-              'id'       => 'wc_settings_tab_abbiamolog_order_url'
-          ),
-          'ABBIAMOLOG_SHIPPING_URL' => array(
-              'name'     => __('Endereço para calcular o frete', 'abbiamo'),
-              'type'     => 'text',
-              'css'      => 'width:500px;',
-              'desc'     => '',
-              'default'  => '',
-              'id'       => 'wc_settings_tab_abbiamolog_shipping_url'
-          ),
       );
   }
 
