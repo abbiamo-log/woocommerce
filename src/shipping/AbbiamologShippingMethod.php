@@ -1,7 +1,6 @@
 <?
 
-use GuzzleHttp\Client;
-use GuzzleHttp\Exception\ClientException;
+use WooCommerce\Abbiamo\Http\AbbiamoHttpHandler;
 
 if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
 
@@ -44,19 +43,7 @@ function abbiamolog_shipping_method_init() {
 			}
 
 			public function init_settings() {
-				$client = new Client(['base_uri' => get_option('wc_settings_tab_abbiamolog_token_url')]);
-				$response = $client->request('POST', '/prod/auth/gentoken', [
-					'body' => json_encode([
-						'username' => get_option('wc_settings_tab_abbiamolog_client_id'),
-						'password' => get_option('wc_settings_tab_abbiamolog_secret_key'),
-					]),
-					'headers' => [
-						'Content-Type' => 'application/json',
-					],
-				]);
-				$response_body = json_decode((string) $response->getBody(), true);
-
-				$this->abbiammo_access_token = $response_body['access_token'];
+				$this->abbiamo_handler = new AbbiamoHttpHandler();
 			}
 
 			/**
@@ -93,7 +80,7 @@ function abbiamolog_shipping_method_init() {
 					$price  = $price + ($product->get_price() * 100) * $quantity;
 				}
 
-				$cost = $this->calcule_abbiamo_shipping($postcode, $price, $weight);
+				$cost = $this->abbiamo_handler->get_shipping_rate($postcode, $price, $weight);
 				if (is_null($cost)) {
 					return;
 				}

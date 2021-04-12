@@ -18,6 +18,8 @@ if(!isset($_SESSION)) {
   session_start();
 }
 
+use WooCommerce\Abbiamo\Repository\AbbiamoRepository;
+
 /* Exit if accessed directly */
 if (!defined('ABSPATH')) {
   exit;
@@ -28,7 +30,7 @@ class WooCommerceAbbiamo {
       define('ABBIAMO_FILE_PATH', plugin_dir_path(__FILE__));
       // define('JADLOG_ROOT_URL', plugins_url('', __FILE__));
 
-      // add_action('admin_menu', array($this, 'add_export_tab'));
+      add_action('admin_menu', array($this, 'add_export_tab'));
       add_filter('woocommerce_settings_tabs_array',            array($this, 'add_settings_tab'), 50);
       add_action('woocommerce_settings_tabs_abbiamo_shipping',  array($this, 'settings_tab'));
       add_action('woocommerce_update_options_abbiamo_shipping', array($this, 'update_settings'));
@@ -60,6 +62,9 @@ class WooCommerceAbbiamo {
     }
 
     define('ABBIAMOLOG_FILE_PATH', dirname(__FILE__));
+
+    include_once('src/install/abbiamo-shipping-install-table.php');
+    wc_abbiamo_install_table();
   }
 
   function deactivate() {
@@ -288,6 +293,40 @@ class WooCommerceAbbiamo {
           'id'       => 'wc_settings_tab_abbiamolog_shop_trading_name'
       ),
     );
+  }
+
+  function add_export_tab() {
+      add_submenu_page('woocommerce', __('Abbiamo', 'abbiamolog'), __('Abbiamo', 'abbiamolog'), 'manage_woocommerce', 'abbiamolog', array($this, 'display_export_page'), 8);
+  }
+
+  function display_export_page() {
+    ?>
+      <div class="wrap">
+        <table class="wp-list-table widefat fixed posts">
+          <thead>
+            <tr>
+              <th scope="col" id="order_id"        class="manage-column column-order_number">
+                  <?= __('Número do pedido', 'abbiamolog') ?>
+              </th>
+              <th scope="col" id="order_date"      class="manage-column column-order_tracking">
+                  <?= __('Tracking do pedido', 'abbiamolog') ?>
+              </th>
+            </tr>
+          </thead>
+          <tbody id="the-list">
+            <?
+              $orders = AbbiamoRepository::get_all();
+              foreach ($orders as $order) {
+            ?>
+            <tr>
+              <td><?= $order->order_id ?></td>
+              <td><a href="http://meupedido.abbiamolog.com/#/<?= $order->tracking ?>">Tracking - <?= $order->tracking ?><a/></td>
+            </tr>
+            <? } ?>
+          </tbody>
+        </table>
+      </div>
+    <?
   }
 }
 
