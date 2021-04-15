@@ -28,7 +28,7 @@ class AbbiamoHttpHandler {
 
       $response_body = json_decode((string) $response->getBody(), true);
 
-      return $response_body['tracking'];
+      return $response_body['invoice_created'];
     } catch (ClientException $e) {
       return null;
     }
@@ -38,7 +38,7 @@ class AbbiamoHttpHandler {
     try {
       $access_token = $this->get_access_token();
       $response = $this->client->get(
-        self::SHIPPING_URL . "?zip_code={$postcode}&weight={$weight}&price={$price}",
+        self::SHIPPING_URL . "?zip_code={$postcode}&weight={$weight}&amount={$price}",
         [
           'headers' => [
             'Authorization' => "Bearer {$access_token}",

@@ -104,7 +104,7 @@ class WooCommerceAbbiamo {
   public function get_shipments_settings() {
       return array(
           'ABBIAMOLOG_CLIENT_ID' => array(
-              'name'     => __('Client ID da conta', 'abbiamo'),
+              'name'     => __('Usuário', 'abbiamo'),
               'type'     => 'text',
               'css'      => 'width:500px;',
               'desc'     => '',
@@ -112,7 +112,7 @@ class WooCommerceAbbiamo {
               'id'       => 'wc_settings_tab_abbiamolog_client_id'
           ),
           'ABBIAMOLOG_SECRET_KEY' => array(
-              'name'     => __('Secret Key da conta', 'abbiamo'),
+              'name'     => __('Senha', 'abbiamo'),
               'type'     => 'text',
               'css'      => 'width:500px;',
               'desc'     => '',
