@@ -39,7 +39,7 @@ if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
       try {
         AbbiamoRepository::create( $this->order->get_order_number(), $tracking );
       } catch (\Exception $e) {
-        wp_die($e->getMessage());
+        error_log(print_r($e->getMessage()));
         return;
       }
     }
@@ -67,22 +67,29 @@ if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
       $items        = array();
 
       foreach ($this->order->get_items() as $item) {
-        $product  = $item->get_product();
+        $product   = $item->get_product();
+
         $quantity = $item->get_quantity();
-        $total_weight   = $weight + ($product->get_weight() * 1000) * $quantity;
+        $weight   = empty($product->get_weight()) ? 100 : intval($product->get_weight()) * 1000;
+        $height   = empty($product->get_height()) ? 100 : intval($product->get_height());
+        $length   = empty($product->get_length()) ? 100 : intval($product->get_length());
+        $width    = empty($product->get_width()) ? 100 : intval($product->get_width());
+        $sku      = empty($product->get_sku()) ? 'SKU' : $product->get_sku();
+        $name     = empty($product->get_name()) ? 'Nome' : $product->get_name();
+        $total_weight = $total_weight + ($weight * $quantity);
 
         $dimensions = [
-          'height' => intval($product->get_width()),
-          'length' => intval($product->get_height()),
-          'width'  => intval($product->get_width()),
+          'height' => $height,
+          'length' => $length,
+          'width'  => $width,
         ];
 
         $items[] = [
-          'name'     => $product->get_name(),
-          'sku'      => $product->get_sku(),
-          'quantity' => $quantity,
-          'amount'   => $product->get_price() * 100,
-          'weight'   => $product->get_weight() * 1000,
+          'name'      => $product->get_name() ?? 'name',
+          'sku'       => $sku,
+          'quantity'  => $quantity,
+          'amount'    => $product->get_price() * 100,
+          'weight'    => $weight,
         ];
       }
 

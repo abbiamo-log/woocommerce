@@ -3,7 +3,7 @@
  * Plugin Name: WooCommerce Abbiamolog
  * Plugin URI: https://github.com/abbiamo/woocommerce
  * Description: Abbiamolog Shipping Module for WooCommerce 3 & 4
- * Version: 0.0.1
+ * Version: 0.0.2
  * Author: Abbiamo
  * Author URI: https://www.abbiamolog.com
  *
@@ -28,12 +28,12 @@ if (!defined('ABSPATH')) {
 class WooCommerceAbbiamo {
   function init() {
       define('ABBIAMO_FILE_PATH', plugin_dir_path(__FILE__));
-      // define('JADLOG_ROOT_URL', plugins_url('', __FILE__));
 
       add_action('admin_menu', array($this, 'add_export_tab'));
       add_filter('woocommerce_settings_tabs_array',            array($this, 'add_settings_tab'), 50);
       add_action('woocommerce_settings_tabs_abbiamo_shipping',  array($this, 'settings_tab'));
       add_action('woocommerce_update_options_abbiamo_shipping', array($this, 'update_settings'));
+      add_action('woocommerce_after_shipping_rate', array( $this, 'shipping_delivery_forecast' ), 100);
 
       require_once(ABBIAMO_FILE_PATH . '/vendor/autoload.php');
       require_once(ABBIAMO_FILE_PATH . '/src/shipping/AbbiamologShippingMethod.php');
@@ -296,7 +296,7 @@ class WooCommerceAbbiamo {
             ?>
             <tr>
               <td><?= $order->order_id ?></td>
-              <td><a href="http://meupedido.abbiamolog.com/#/<?= $order->tracking ?>">Tracking - <?= $order->tracking ?><a/></td>
+              <td><a href="http://meupedido.abbiamolog.com/<?= $order->tracking ?>">Tracking - <?= $order->tracking ?><a/></td>
             </tr>
             <? } ?>
           </tbody>
@@ -304,6 +304,15 @@ class WooCommerceAbbiamo {
       </div>
     <?
   }
+
+  function shipping_delivery_forecast( $shipping_method ) {
+		$meta_data = $shipping_method->get_meta_data();
+		$abbiamo   = isset($meta_data['abbiamo_delivery']) ? $meta_data['abbiamo_delivery'] : false ;
+
+		if ( $abbiamo ) {
+			echo '<p><small>Entrega em 1 dia útil após expedição</small></p>';
+		}
+	}
 }
 
 $abbiamo_woocommerce = new WooCommerceAbbiamo();

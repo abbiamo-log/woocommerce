@@ -30,6 +30,7 @@ class AbbiamoHttpHandler {
 
       return $response_body['invoice_created'];
     } catch (ClientException $e) {
+      error_log($e->getMessage());
       return null;
     }
   }

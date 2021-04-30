@@ -25,7 +25,7 @@ function abbiamolog_shipping_method_init() {
 					'instance-settings',
 					'instance-settings-modal',
 				);
-				$this->title              = 'Abbiamolog';
+				$this->title              = 'Abbiamo';
 				$this->init();
 			}
 
@@ -88,9 +88,12 @@ function abbiamolog_shipping_method_init() {
 				$this->add_rate(
 					array(
 						'id'			 => self::METHOD_ID,
-						'label'    => 'Abbiamo',
+						'label'    => $this->title,
 						'cost'     => floatval( $cost / 100 ),
 						'calc_tax' => 'per_ordem',
+						'meta_data' => array(
+							'abbiamo_delivery' => true,
+						),
 					)
 				);
 			}
