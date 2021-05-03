@@ -64,23 +64,24 @@ function abbiamolog_shipping_method_init() {
 				$items = $package['contents'];
 
 				$volume = 0;
-				$weight = 0;
+				$total_weight = 0;
 				$price  = 0;
 				foreach ($items as $item) {
 					$quantity = $item['quantity'];
 					$product  = wc_get_product($item['product_id']);
 
-					$width  = $product->get_width();
-					$height = $product->get_height();
-					$length = $product->get_length();
+					$height = empty($product->get_height()) ? 100 : intval($product->get_height());
+	        $length = empty($product->get_length()) ? 100 : intval($product->get_length());
+	        $width  = empty($product->get_width()) ? 100 : intval($product->get_width());
 					$volume = $volume + ($width * $length * $height) * $quantity;
 
-					$weight = $weight + ($product->get_weight() * 1000) * $quantity;
+					$weight       = empty($product->get_weight()) ? 500 : intval($product->get_weight()) * 1000;
+					$total_weight = $total_weight + ($weight) * $quantity;
 
 					$price  = $price + ($product->get_price() * 100) * $quantity;
 				}
 
-				$cost = $this->abbiamo_handler->get_shipping_rate($postcode, $price, $weight);
+				$cost = $this->abbiamo_handler->get_shipping_rate($postcode, $price, $total_weight);
 				if (is_null($cost)) {
 					return;
 				}
