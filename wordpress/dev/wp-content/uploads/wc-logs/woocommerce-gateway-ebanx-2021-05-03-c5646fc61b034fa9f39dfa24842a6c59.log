@@ -1,0 +1,62 @@
+05-03-2021 @ 12:06:00 - EBANX Error: Verifique se os dados do cartão de crédito estão corretos.
+05-03-2021 @ 12:06:10 - Processando resposta: Array
+(
+    [payment] => Array
+        (
+            [hash] => 6090115fbe91d526d926d4754e9bdfd89dc6a17af5fe6aea
+            [pin] => 446915763
+            [country] => br
+            [merchant_payment_code] => 20-d4def5a43ced6ba8313ce8f140428d5e
+            [order_number] => 20
+            [status] => CO
+            [status_date] => 2021-05-03 15:06:10
+            [open_date] => 2021-05-03 15:06:07
+            [confirm_date] => 2021-05-03 15:06:10
+            [transfer_date] => 
+            [amount_br] => 122.66
+            [amount_ext] => 122.20
+            [amount_iof] => 0.46
+            [currency_rate] => 1.0000
+            [currency_ext] => BRL
+            [due_date] => 2021-05-06
+            [instalments] => 1
+            [payment_type_code] => visa
+            [details] => Array
+                (
+                    [billing_descriptor] => DEMONSTRATION
+                )
+
+            [transaction_status] => Array
+                (
+                    [acquirer] => EBANX
+                    [code] => OK
+                    [description] => Accepted
+                    [authcode] => 92191
+                )
+
+            [pre_approved] => 1
+            [capture_available] => 
+            [user_value_5] => Benjamin
+            [customer] => Array
+                (
+                    [document] => 06256617967
+                    [email] => ruanitodiego@gmail.com
+                    [name] => RUANITO SANTOS
+                    [birth_date] => 
+                )
+
+            [risk_analysis] => Array
+                (
+                    [score] => 
+                    [fraud_indicators] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+    [status] => SUCCESS
+)
+
+05-03-2021 @ 12:06:10 - Payment approved. Hash: 6090115fbe91d526d926d4754e9bdfd89dc6a17af5fe6aea

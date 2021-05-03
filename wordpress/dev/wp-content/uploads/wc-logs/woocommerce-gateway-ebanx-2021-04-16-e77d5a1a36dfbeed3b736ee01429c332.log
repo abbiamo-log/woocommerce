@@ -1,0 +1,61 @@
+04-16-2021 @ 10:09:59 - Processando resposta: Array
+(
+    [payment] => Array
+        (
+            [hash] => 60798ca1c1d7c2d4c37c60875a00ad0fe9209616470c4477
+            [pin] => 239304101
+            [country] => br
+            [merchant_payment_code] => 12-a7241ea4d5e308355aad8971f06b9112
+            [order_number] => 12
+            [status] => CO
+            [status_date] => 2021-04-16 13:09:59
+            [open_date] => 2021-04-16 13:09:53
+            [confirm_date] => 2021-04-16 13:09:59
+            [transfer_date] => 
+            [amount_br] => 173.00
+            [amount_ext] => 172.35
+            [amount_iof] => 0.65
+            [currency_rate] => 1.0000
+            [currency_ext] => BRL
+            [due_date] => 2021-04-19
+            [instalments] => 1
+            [payment_type_code] => visa
+            [details] => Array
+                (
+                    [billing_descriptor] => DEMONSTRATION
+                )
+
+            [transaction_status] => Array
+                (
+                    [acquirer] => EBANX
+                    [code] => OK
+                    [description] => Accepted
+                    [authcode] => 77466
+                )
+
+            [pre_approved] => 1
+            [capture_available] => 
+            [user_value_5] => Benjamin
+            [customer] => Array
+                (
+                    [document] => 06256617967
+                    [email] => ruanitodiego@gmail.com
+                    [name] => RUANITO SANTOS
+                    [birth_date] => 
+                )
+
+            [risk_analysis] => Array
+                (
+                    [score] => 
+                    [fraud_indicators] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+    [status] => SUCCESS
+)
+
+04-16-2021 @ 10:09:59 - Payment approved. Hash: 60798ca1c1d7c2d4c37c60875a00ad0fe9209616470c4477

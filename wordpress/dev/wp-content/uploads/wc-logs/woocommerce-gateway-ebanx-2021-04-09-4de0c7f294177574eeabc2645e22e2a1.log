@@ -1,0 +1,310 @@
+04-09-2021 @ 15:29:38 - EBANX Error: Não foi possível concluir a compra. Por favor, tente novamente ou entre em contato com o site. (500)
+04-09-2021 @ 15:31:17 - EBANX Error: Não foi possível concluir a compra. Por favor, tente novamente ou entre em contato com o site. (500)
+04-09-2021 @ 15:32:42 - EBANX Error: Não foi possível concluir a compra. Por favor, tente novamente ou entre em contato com o site. (500)
+04-09-2021 @ 15:35:46 - EBANX Error: Não foi possível concluir a compra. Por favor, tente novamente ou entre em contato com o site. (500)
+04-09-2021 @ 15:41:15 - EBANX Error: Não foi possível concluir a compra. Por favor, tente novamente ou entre em contato com o site. (500)
+04-09-2021 @ 15:43:57 - EBANX Error: Não foi possível concluir a compra. Por favor, tente novamente ou entre em contato com o site. (500)
+04-09-2021 @ 15:48:26 - Processando resposta: Array
+(
+    [payment] => Array
+        (
+            [hash] => 6070a1771ae5bbb4a7a20269e2a49d8ad623d27f387a68ec
+            [pin] => 632070058
+            [country] => br
+            [merchant_payment_code] => 136-3ff13838b559dbb5a61d2b38b9002819
+            [order_number] => 136
+            [status] => PE
+            [status_date] => 
+            [open_date] => 2021-04-09 18:48:22
+            [confirm_date] => 
+            [transfer_date] => 
+            [amount_br] => 172.55
+            [amount_ext] => 171.90
+            [amount_iof] => 0.65
+            [currency_rate] => 1.0000
+            [currency_ext] => BRL
+            [due_date] => 2021-04-12
+            [instalments] => 1
+            [payment_type_code] => visa
+            [details] => Array
+                (
+                    [billing_descriptor] => DEMONSTRATION
+                )
+
+            [transaction_status] => Array
+                (
+                    [acquirer] => EBANX
+                    [code] => OK
+                    [description] => Accepted
+                    [authcode] => 46418
+                )
+
+            [pre_approved] => 1
+            [capture_available] => 1
+            [user_value_5] => Benjamin
+            [customer] => Array
+                (
+                    [document] => 06256617967
+                    [email] => ruanito@abbiamolog.com
+                    [name] => RUANITO SANTOS
+                    [birth_date] => 
+                )
+
+            [risk_analysis] => Array
+                (
+                    [score] => 
+                    [fraud_indicators] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+    [status] => SUCCESS
+)
+
+04-09-2021 @ 15:52:13 - Processando resposta: Array
+(
+    [payment] => Array
+        (
+            [hash] => 6070a2592ac61b35dd3a622dc6f9fbb5d72e790a9d3e8076
+            [pin] => 864878236
+            [country] => br
+            [merchant_payment_code] => 136-366c7f7594f2cf86c82b7da43af4c51a
+            [order_number] => 136
+            [status] => PE
+            [status_date] => 
+            [open_date] => 2021-04-09 18:52:09
+            [confirm_date] => 
+            [transfer_date] => 
+            [amount_br] => 172.55
+            [amount_ext] => 171.90
+            [amount_iof] => 0.65
+            [currency_rate] => 1.0000
+            [currency_ext] => BRL
+            [due_date] => 2021-04-12
+            [instalments] => 1
+            [payment_type_code] => visa
+            [details] => Array
+                (
+                    [billing_descriptor] => DEMONSTRATION
+                )
+
+            [transaction_status] => Array
+                (
+                    [acquirer] => EBANX
+                    [code] => OK
+                    [description] => Accepted
+                    [authcode] => 62031
+                )
+
+            [pre_approved] => 1
+            [capture_available] => 1
+            [user_value_5] => Benjamin
+            [customer] => Array
+                (
+                    [document] => 06256617967
+                    [email] => ruanito@abbiamolog.com
+                    [name] => RUANITO SANTOS
+                    [birth_date] => 
+                )
+
+            [risk_analysis] => Array
+                (
+                    [score] => 
+                    [fraud_indicators] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+    [status] => SUCCESS
+)
+
+04-09-2021 @ 15:52:13 - Payment approved. Hash: 6070a2592ac61b35dd3a622dc6f9fbb5d72e790a9d3e8076
+04-09-2021 @ 15:53:22 - Processando resposta: Array
+(
+    [payment] => Array
+        (
+            [hash] => 6070a29e61cd1c6fc5352afeb75ff869a0a7c64f904366e8
+            [pin] => 847561962
+            [country] => br
+            [merchant_payment_code] => 137-50b95fe9b6af921ac5be92de85e35ecd
+            [order_number] => 137
+            [status] => PE
+            [status_date] => 
+            [open_date] => 2021-04-09 18:53:17
+            [confirm_date] => 
+            [transfer_date] => 
+            [amount_br] => 172.55
+            [amount_ext] => 171.90
+            [amount_iof] => 0.65
+            [currency_rate] => 1.0000
+            [currency_ext] => BRL
+            [due_date] => 2021-04-12
+            [instalments] => 1
+            [payment_type_code] => visa
+            [details] => Array
+                (
+                    [billing_descriptor] => DEMONSTRATION
+                )
+
+            [transaction_status] => Array
+                (
+                    [acquirer] => EBANX
+                    [code] => OK
+                    [description] => Accepted
+                    [authcode] => 37048
+                )
+
+            [pre_approved] => 1
+            [capture_available] => 1
+            [user_value_5] => Benjamin
+            [customer] => Array
+                (
+                    [document] => 06256617967
+                    [email] => ruanito@abbiamolog.com
+                    [name] => RUANITO SANTOS
+                    [birth_date] => 
+                )
+
+            [risk_analysis] => Array
+                (
+                    [score] => 
+                    [fraud_indicators] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+    [status] => SUCCESS
+)
+
+04-09-2021 @ 15:53:22 - Payment approved. Hash: 6070a29e61cd1c6fc5352afeb75ff869a0a7c64f904366e8
+04-09-2021 @ 15:59:12 - Processando resposta: Array
+(
+    [payment] => Array
+        (
+            [hash] => 6070a3fd72808d7d7b85e0246819c7596c877abc16acb470
+            [pin] => 463892754
+            [country] => br
+            [merchant_payment_code] => 138-6c9b44b69d97301094986fc73a74d4d8
+            [order_number] => 138
+            [status] => PE
+            [status_date] => 
+            [open_date] => 2021-04-09 18:59:08
+            [confirm_date] => 
+            [transfer_date] => 
+            [amount_br] => 3039.48
+            [amount_ext] => 3027.97
+            [amount_iof] => 11.51
+            [currency_rate] => 1.0000
+            [currency_ext] => BRL
+            [due_date] => 2021-04-12
+            [instalments] => 1
+            [payment_type_code] => visa
+            [details] => Array
+                (
+                    [billing_descriptor] => DEMONSTRATION
+                )
+
+            [transaction_status] => Array
+                (
+                    [acquirer] => EBANX
+                    [code] => OK
+                    [description] => Accepted
+                    [authcode] => 16388
+                )
+
+            [pre_approved] => 1
+            [capture_available] => 1
+            [user_value_5] => Benjamin
+            [customer] => Array
+                (
+                    [document] => 06256617967
+                    [email] => ruanito@abbiamolog.com
+                    [name] => RUANITO SANTOS
+                    [birth_date] => 
+                )
+
+            [risk_analysis] => Array
+                (
+                    [score] => 
+                    [fraud_indicators] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+    [status] => SUCCESS
+)
+
+04-09-2021 @ 15:59:12 - Payment approved. Hash: 6070a3fd72808d7d7b85e0246819c7596c877abc16acb470
+04-09-2021 @ 16:01:38 - Processando resposta: Array
+(
+    [payment] => Array
+        (
+            [hash] => 6070a48e5a021e6b4634370f738217f35823ecd133c2cbcf
+            [pin] => 809216752
+            [country] => br
+            [merchant_payment_code] => 139-9014f0c6443eda935bac3890d13bbdd9
+            [order_number] => 139
+            [status] => PE
+            [status_date] => 
+            [open_date] => 2021-04-09 19:01:33
+            [confirm_date] => 
+            [transfer_date] => 
+            [amount_br] => 2285.01
+            [amount_ext] => 2276.36
+            [amount_iof] => 8.65
+            [currency_rate] => 1.0000
+            [currency_ext] => BRL
+            [due_date] => 2021-04-12
+            [instalments] => 1
+            [payment_type_code] => visa
+            [details] => Array
+                (
+                    [billing_descriptor] => DEMONSTRATION
+                )
+
+            [transaction_status] => Array
+                (
+                    [acquirer] => EBANX
+                    [code] => OK
+                    [description] => Accepted
+                    [authcode] => 80649
+                )
+
+            [pre_approved] => 1
+            [capture_available] => 1
+            [user_value_5] => Benjamin
+            [customer] => Array
+                (
+                    [document] => 06256617967
+                    [email] => ruanito@abbiamolog.com
+                    [name] => RUANITO SANTOS
+                    [birth_date] => 
+                )
+
+            [risk_analysis] => Array
+                (
+                    [score] => 
+                    [fraud_indicators] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+    [status] => SUCCESS
+)
+
+04-09-2021 @ 16:01:38 - Payment approved. Hash: 6070a48e5a021e6b4634370f738217f35823ecd133c2cbcf

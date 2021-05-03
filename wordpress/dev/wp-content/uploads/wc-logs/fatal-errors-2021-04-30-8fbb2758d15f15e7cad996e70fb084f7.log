@@ -1,0 +1,54 @@
+2021-04-30T13:39:53+00:00 CRITICAL Uncaught Error: Undefined class constant 'METHOD_ID' in /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/Shipping/AbbiamologShippingMethod.php:131
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(287): add_abbiamolog_shipping_method(Array)
+#1 /var/www/html/wp-includes/plugin.php(212): WP_Hook->apply_filters(Array, Array)
+#2 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-shipping.php(148): apply_filters('woocommerce_shi...', Array)
+#3 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-shipping-zone.php(166): WC_Shipping->get_shipping_method_class_names()
+#4 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-shipping.php(162): WC_Shipping_Zone->get_shipping_methods(true)
+#5 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-shipping.php(333): WC_Shipping->load_shipping_methods(Array)
+#6 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-shipping.php(260): WC_Shipping->calculate_shipping_for_package(Array, 0)
+#7 /var/www/html/w, em /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/Shipping/AbbiamologShippingMethod.php, na linha 131
+
+2021-04-30T13:40:22+00:00 CRITICAL Uncaught Error: Undefined class constant 'METHOD_ID' in /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/Shipping/AbbiamologShippingMethod.php:131
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(287): add_abbiamolog_shipping_method(Array)
+#1 /var/www/html/wp-includes/plugin.php(212): WP_Hook->apply_filters(Array, Array)
+#2 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-shipping.php(148): apply_filters('woocommerce_shi...', Array)
+#3 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-shipping-zone.php(166): WC_Shipping->get_shipping_method_class_names()
+#4 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-shipping.php(162): WC_Shipping_Zone->get_shipping_methods(true)
+#5 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-shipping.php(333): WC_Shipping->load_shipping_methods(Array)
+#6 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-shipping.php(260): WC_Shipping->calculate_shipping_for_package(Array, 0)
+#7 /var/www/html/w, em /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/Shipping/AbbiamologShippingMethod.php, na linha 131
+
+2021-04-30T13:40:40+00:00 CRITICAL Uncaught Error: Undefined class constant 'METHOD_ID' in /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/Shipping/AbbiamologShippingMethod.php:131
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(287): add_abbiamolog_shipping_method(Array)
+#1 /var/www/html/wp-includes/plugin.php(212): WP_Hook->apply_filters(Array, Array)
+#2 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-shipping.php(148): apply_filters('woocommerce_shi...', Array)
+#3 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-shipping-zone.php(166): WC_Shipping->get_shipping_method_class_names()
+#4 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-shipping.php(162): WC_Shipping_Zone->get_shipping_methods(true)
+#5 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-shipping.php(333): WC_Shipping->load_shipping_methods(Array)
+#6 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-shipping.php(260): WC_Shipping->calculate_shipping_for_package(Array, 0)
+#7 /var/www/html/w, em /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/Shipping/AbbiamologShippingMethod.php, na linha 131
+
+2021-04-30T15:29:41+00:00 CRITICAL Uncaught Error: Call to undefined function encode() in /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/Order/AbbiamoOrder.php:36
+Stack trace:
+#0 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/Order/AbbiamoOrder.php(172): AbbiamologOrder->create_abbiamo_invoice()
+#1 /var/www/html/wp-includes/class-wp-hook.php(287): wc_abbiamo_create_order(23)
+#2 /var/www/html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#3 /var/www/html/wp-includes/plugin.php(484): WP_Hook->do_action(Array)
+#4 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-order.php(121): do_action('woocommerce_pay...', 23)
+#5 /var/www/html/wp-content/plugins/ebanx-payment-gateway-for-woocommerce/gateways/class-wc-ebanx-new-gateway.php(311): WC_Order->payment_complete('608c22617fec06f...')
+#6 /var/www/html/wp-content/plugins/ebanx-payment-gateway-for-woocommerce/gateways/class-wc-ebanx-credit-card-gateway.php(251): WC_EBANX_New_Gateway->process_response(Array, Object(Automattic\WooCommerce\Admin, em /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/Order/AbbiamoOrder.php, na linha 36
+
+2021-04-30T15:38:55+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Product_Simple::get_imaga() in /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/Order/AbbiamoOrder.php:71
+Stack trace:
+#0 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/Order/AbbiamoOrder.php(29): AbbiamologOrder->get_volumes()
+#1 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/Order/AbbiamoOrder.php(174): AbbiamologOrder->create_abbiamo_invoice()
+#2 /var/www/html/wp-includes/class-wp-hook.php(287): wc_abbiamo_create_order(27)
+#3 /var/www/html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#4 /var/www/html/wp-includes/plugin.php(484): WP_Hook->do_action(Array)
+#5 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-order.php(121): do_action('woocommerce_pay...', 27)
+#6 /var/www/html/wp-content/plugins/ebanx-payment-gateway-for-woocommerce/gateways/class-wc-ebanx-new-gateway.php(311): WC_Order->payment_complete('608c248b6927695...')
+#7 /var/www/html/wp-content/plugins/ebanx-payment-gateway-for-wooco, em /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/Order/AbbiamoOrder.php, na linha 71
+

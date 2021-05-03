@@ -1,0 +1,70 @@
+2021-04-09T15:40:23+00:00 CRITICAL syntax error, unexpected ';', expecting variable (T_VARIABLE), em /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/Http/AbbiamoHttpHandler.php, na linha 13
+
+2021-04-09T15:41:03+00:00 CRITICAL syntax error, unexpected ';', expecting variable (T_VARIABLE), em /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/Http/AbbiamoHttpHandler.php, na linha 13
+
+2021-04-09T15:41:13+00:00 CRITICAL syntax error, unexpected ';', expecting variable (T_VARIABLE), em /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/Http/AbbiamoHttpHandler.php, na linha 13
+
+2021-04-09T15:42:10+00:00 CRITICAL syntax error, unexpected ';', expecting variable (T_VARIABLE), em /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/Http/AbbiamoHttpHandler.php, na linha 13
+
+2021-04-09T15:43:10+00:00 CRITICAL syntax error, unexpected ';', expecting variable (T_VARIABLE), em /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/Http/AbbiamoHttpHandler.php, na linha 13
+
+2021-04-09T15:43:57+00:00 CRITICAL syntax error, unexpected ';', expecting variable (T_VARIABLE), em /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/Http/AbbiamoHttpHandler.php, na linha 15
+
+2021-04-09T15:44:22+00:00 CRITICAL syntax error, unexpected ';', expecting variable (T_VARIABLE), em /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/Http/AbbiamoHttpHandler.php, na linha 15
+
+2021-04-09T15:44:47+00:00 CRITICAL syntax error, unexpected ';', expecting variable (T_VARIABLE), em /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/Http/AbbiamoHttpHandler.php, na linha 15
+
+2021-04-09T15:45:05+00:00 CRITICAL syntax error, unexpected ';', expecting variable (T_VARIABLE), em /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/Http/AbbiamoHttpHandler.php, na linha 13
+
+2021-04-09T15:47:37+00:00 CRITICAL syntax error, unexpected ';', expecting variable (T_VARIABLE), em /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/Http/AbbiamoHttpHandler.php, na linha 13
+
+2021-04-09T15:47:49+00:00 CRITICAL syntax error, unexpected ';', expecting variable (T_VARIABLE), em /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/Http/AbbiamoHttpHandler.php, na linha 13
+
+2021-04-09T15:48:19+00:00 CRITICAL Uncaught Error: Class 'AbbiamoHttpHandler' not found in /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/shipping/AbbiamologShippingMethod.php:34
+Stack trace:
+#0 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-shipping.php(199): WC_Abbiamolog_Shipping_Method->__construct()
+#1 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-shipping.php(177): WC_Shipping->register_shipping_method('WC_Abbiamolog_S...')
+#2 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-shipping.php(333): WC_Shipping->load_shipping_methods(Array)
+#3 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-shipping.php(260): WC_Shipping->calculate_shipping_for_package(Array, 0)
+#4 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-cart.php(1391): WC_Shipping->calculate_shipping(Array)
+#5 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-cart-totals.php(339): WC_Cart->calculate_shipping()
+#6 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-cart-tot, em /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/shipping/AbbiamologShippingMethod.php, na linha 34
+
+2021-04-09T15:52:46+00:00 CRITICAL syntax error, unexpected ';', expecting variable (T_VARIABLE), em /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/Http/AbbiamoHttpHandler.php, na linha 13
+
+2021-04-09T15:52:52+00:00 CRITICAL syntax error, unexpected ';', expecting variable (T_VARIABLE), em /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/Http/AbbiamoHttpHandler.php, na linha 13
+
+2021-04-09T15:55:23+00:00 CRITICAL Uncaught Error: Call to a member function post() on null in /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/Http/AbbiamoHttpHandler.php:22
+Stack trace:
+#0 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/Http/AbbiamoHttpHandler.php(18): WooCommerce\Abbiamo\Http\AbbiamoHttpHandler->get_access_token()
+#1 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/shipping/AbbiamologShippingMethod.php(86): WooCommerce\Abbiamo\Http\AbbiamoHttpHandler->get_shipping_rate('01426000', 15000, 200)
+#2 /var/www/html/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-shipping-method.php(233): WC_Abbiamolog_Shipping_Method->calculate_shipping(Array)
+#3 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-shipping.php(345): WC_Shipping_Method->get_rates_for_package(Array)
+#4 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-shipping.php(260): WC_Shipping->calculate_shipping_for_package(Array, 0)
+#5 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-cart.p, em /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/Http/AbbiamoHttpHandler.php, na linha 22
+
+2021-04-09T15:55:41+00:00 CRITICAL Uncaught GuzzleHttp\Exception\ClientException: Client error: `POST https://9ke2hmv7vg.execute-api.us-east-1.amazonaws.com/prod` resulted in a `403 Forbidden` response:
+{"message":"Missing Authentication Token"}
+ in /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guzzlehttp/guzzle/src/Exception/RequestException.php:113
+Stack trace:
+#0 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guzzlehttp/guzzle/src/Middleware.php(69): GuzzleHttp\Exception\RequestException::create(Object(GuzzleHttp\Psr7\Request), Object(GuzzleHttp\Psr7\Response), NULL, Array, NULL)
+#1 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guzzlehttp/promises/src/Promise.php(204): GuzzleHttp\Middleware::GuzzleHttp\{closure}(Object(GuzzleHttp\Psr7\Response))
+#2 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guzzlehttp/promises/src/Promise.php(153): GuzzleHttp\Promise\Promise::callHandler(1, Object(GuzzleHttp\Psr7\Response), NULL)
+#3 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/, em /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guzzlehttp/guzzle/src/Exception/RequestException.php, na linha 113
+
+2021-04-09T15:58:56+00:00 CRITICAL Uncaught Error: Call to a member function get() on null in /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/Http/AbbiamoHttpHandler.php:20
+Stack trace:
+#0 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/shipping/AbbiamologShippingMethod.php(86): WooCommerce\Abbiamo\Http\AbbiamoHttpHandler->get_shipping_rate('01426000', 15000, 200)
+#1 /var/www/html/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-shipping-method.php(233): WC_Abbiamolog_Shipping_Method->calculate_shipping(Array)
+#2 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-shipping.php(345): WC_Shipping_Method->get_rates_for_package(Array)
+#3 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-shipping.php(260): WC_Shipping->calculate_shipping_for_package(Array, 0)
+#4 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-cart.php(1391): WC_Shipping->calculate_shipping(Array)
+#5 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-ajax.php(357): WC_Cart->calculate_shipping()
+#, em /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/Http/AbbiamoHttpHandler.php, na linha 20
+
+2021-04-09T16:15:23+00:00 CRITICAL syntax error, unexpected ',', expecting variable (T_VARIABLE), em /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/Repository/AbbiamoRepository.php, na linha 8
+
+2021-04-09T16:16:06+00:00 CRITICAL syntax error, unexpected ',', expecting variable (T_VARIABLE), em /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/Repository/AbbiamoRepository.php, na linha 8
+
+2021-04-09T16:18:51+00:00 CRITICAL syntax error, unexpected ',', expecting variable (T_VARIABLE), em /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/Repository/AbbiamoRepository.php, na linha 8
+

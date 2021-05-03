@@ -1,0 +1,123 @@
+04-30-2021 @ 13:18:28 - EBANX Error: Alguns campos não foram preenchidos corretamente. Por favor, verifique e tente novamente.
+04-30-2021 @ 13:18:37 - Processando resposta: Array
+(
+    [payment] => Array
+        (
+            [hash] => 608c2dd9997badf221b1f60e83f5d9bc675958ffc907e57f
+            [pin] => 653450753
+            [country] => br
+            [merchant_payment_code] => 12-069bae681039f7c8e791a080cd3ce5b0
+            [order_number] => 12
+            [status] => CO
+            [status_date] => 2021-04-30 16:18:36
+            [open_date] => 2021-04-30 16:18:33
+            [confirm_date] => 2021-04-30 16:18:36
+            [transfer_date] => 
+            [amount_br] => 122.66
+            [amount_ext] => 122.20
+            [amount_iof] => 0.46
+            [currency_rate] => 1.0000
+            [currency_ext] => BRL
+            [due_date] => 2021-05-03
+            [instalments] => 1
+            [payment_type_code] => visa
+            [details] => Array
+                (
+                    [billing_descriptor] => DEMONSTRATION
+                )
+
+            [transaction_status] => Array
+                (
+                    [acquirer] => EBANX
+                    [code] => OK
+                    [description] => Accepted
+                    [authcode] => 94789
+                )
+
+            [pre_approved] => 1
+            [capture_available] => 
+            [user_value_5] => Benjamin
+            [customer] => Array
+                (
+                    [document] => 06256617967
+                    [email] => ruanito@abbiamolog.com
+                    [name] => RUANITO SANTOS
+                    [birth_date] => 
+                )
+
+            [risk_analysis] => Array
+                (
+                    [score] => 
+                    [fraud_indicators] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+    [status] => SUCCESS
+)
+
+04-30-2021 @ 13:18:37 - Payment approved. Hash: 608c2dd9997badf221b1f60e83f5d9bc675958ffc907e57f
+04-30-2021 @ 13:28:16 - Processando resposta: Array
+(
+    [payment] => Array
+        (
+            [hash] => 608c301cd28ad98a77e71b2519b809679598eeffe2f850a0
+            [pin] => 482220433
+            [country] => br
+            [merchant_payment_code] => 19-7ea88da2974281595ed9c14ddfd2f3f6
+            [order_number] => 19
+            [status] => CO
+            [status_date] => 2021-04-30 16:28:16
+            [open_date] => 2021-04-30 16:28:12
+            [confirm_date] => 2021-04-30 16:28:16
+            [transfer_date] => 
+            [amount_br] => 223.35
+            [amount_ext] => 222.50
+            [amount_iof] => 0.85
+            [currency_rate] => 1.0000
+            [currency_ext] => BRL
+            [due_date] => 2021-05-03
+            [instalments] => 1
+            [payment_type_code] => visa
+            [details] => Array
+                (
+                    [billing_descriptor] => DEMONSTRATION
+                )
+
+            [transaction_status] => Array
+                (
+                    [acquirer] => EBANX
+                    [code] => OK
+                    [description] => Accepted
+                    [authcode] => 65481
+                )
+
+            [pre_approved] => 1
+            [capture_available] => 
+            [user_value_5] => Benjamin
+            [customer] => Array
+                (
+                    [document] => 06256617967
+                    [email] => ruanito@abbiamolog.com
+                    [name] => RUANITO SANTOS
+                    [birth_date] => 
+                )
+
+            [risk_analysis] => Array
+                (
+                    [score] => 
+                    [fraud_indicators] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+    [status] => SUCCESS
+)
+
+04-30-2021 @ 13:28:16 - Payment approved. Hash: 608c301cd28ad98a77e71b2519b809679598eeffe2f850a0
