@@ -158,13 +158,20 @@ if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
     * @return array
     */
     private function get_destination_address() {
-      return [
+      $destination_address = [
         'zip_code' => str_replace('-', '', $this->order->get_shipping_postcode()),
         'state' => $this->order->get_shipping_state(),
         'city' => $this->order->get_shipping_city(),
         'street' => $this->order->get_shipping_address_1(),
         'street_number' => $this->order->get_meta('_shipping_number'),
+        'complement' => $this->order->get_shipping_address_2(),
       ];
+
+      if (!empty($this->order->get_meta('_shipping_neighborhood'))) {
+        $destination_address['neighborhood'] = $this->order->get_meta('_shipping_neighborhood');
+      }
+
+      return $destination_address;
     }
   }
 

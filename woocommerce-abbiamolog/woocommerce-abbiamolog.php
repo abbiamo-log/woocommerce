@@ -1,9 +1,9 @@
 <?
 /**
- * Plugin Name: WooCommerce Abbiamolog
- * Plugin URI: https://github.com/abbiamo/woocommerce
+ * Plugin Name: Abbiamolog Shipping
+ * Plugin URI: https://www.abbiamolog.com
  * Description: Abbiamolog Shipping Module for WooCommerce 3 & 4
- * Version: 0.0.2
+ * Version: 0.0.3
  * Author: Abbiamo
  * Author URI: https://www.abbiamolog.com
  *
