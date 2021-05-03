@@ -104,7 +104,7 @@ if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
     * @return array
     */
     private function get_customer() {
-      if ($this->order->get_meta('_billing_persontype') == '1') {
+      if ($this->order->get_meta('_billing_persontype') == '1' || !empty($this->order->get_meta('_billing_cpf'))) {
         return [
           'email' => $this->order->get_billing_email(),
           'phone' => $this->order->get_billing_phone(),
@@ -159,10 +159,10 @@ if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
     */
     private function get_destination_address() {
       return [
-        'zip_code' => str_replace('-', '', $this->order->get_billing_postcode()),
-        'state' => $this->order->get_billing_state(),
-        'city' => $this->order->get_billing_city(),
-        'street' => $this->order->get_billing_address_1(),
+        'zip_code' => str_replace('-', '', $this->order->get_shipping_postcode()),
+        'state' => $this->order->get_shipping_state(),
+        'city' => $this->order->get_shipping_city(),
+        'street' => $this->order->get_shipping_address_1(),
         'street_number' => $this->order->get_meta('_shipping_number'),
       ];
     }

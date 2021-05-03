@@ -1,0 +1,62 @@
+04-12-2021 @ 10:51:30 - EBANX Error: Alguns campos não foram preenchidos corretamente. Por favor, verifique e tente novamente.
+04-12-2021 @ 10:51:46 - Processando resposta: Array
+(
+    [payment] => Array
+        (
+            [hash] => 6074506fd8927a1d8ccdff50220d2fccad4ddf4813d5cb02
+            [pin] => 801223235
+            [country] => br
+            [merchant_payment_code] => 140-bfb65bc3ac54db568e11986664ef60fd
+            [order_number] => 140
+            [status] => PE
+            [status_date] => 
+            [open_date] => 2021-04-12 13:51:42
+            [confirm_date] => 
+            [transfer_date] => 
+            [amount_br] => 1233.06
+            [amount_ext] => 1228.39
+            [amount_iof] => 4.67
+            [currency_rate] => 1.0000
+            [currency_ext] => BRL
+            [due_date] => 2021-04-15
+            [instalments] => 1
+            [payment_type_code] => visa
+            [details] => Array
+                (
+                    [billing_descriptor] => DEMONSTRATION
+                )
+
+            [transaction_status] => Array
+                (
+                    [acquirer] => EBANX
+                    [code] => OK
+                    [description] => Accepted
+                    [authcode] => 98028
+                )
+
+            [pre_approved] => 1
+            [capture_available] => 1
+            [user_value_5] => Benjamin
+            [customer] => Array
+                (
+                    [document] => 06256617967
+                    [email] => ruanito@abbiamolog.com
+                    [name] => RUANITO SANTOS
+                    [birth_date] => 
+                )
+
+            [risk_analysis] => Array
+                (
+                    [score] => 
+                    [fraud_indicators] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+    [status] => SUCCESS
+)
+
+04-12-2021 @ 10:51:46 - Payment approved. Hash: 6074506fd8927a1d8ccdff50220d2fccad4ddf4813d5cb02

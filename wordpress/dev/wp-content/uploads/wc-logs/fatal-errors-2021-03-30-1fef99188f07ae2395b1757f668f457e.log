@@ -1,0 +1,173 @@
+2021-03-30T13:33:09+00:00 CRITICAL Uncaught Error: Class 'GuzzleHttp\Client' not found in /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/shipping/AbbiamologShippingMethod.php:40
+Stack trace:
+#0 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/shipping/AbbiamologShippingMethod.php(25): WC_Abbiamolog_Shipping_Method->init()
+#1 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-shipping.php(199): WC_Abbiamolog_Shipping_Method->__construct()
+#2 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-shipping.php(177): WC_Shipping->register_shipping_method('WC_Abbiamolog_S...')
+#3 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-shipping.php(333): WC_Shipping->load_shipping_methods(Array)
+#4 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-shipping.php(260): WC_Shipping->calculate_shipping_for_package(Array, 0)
+#5 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-cart.php(1391): WC_Shipping->calculate_shipping(Array)
+#6 /var/www/html/wp-content/plugins/woocommerce/i, em /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/shipping/AbbiamologShippingMethod.php, na linha 40
+
+2021-03-30T13:33:21+00:00 CRITICAL Uncaught Error: Class 'GuzzleHttp\Client' not found in /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/shipping/AbbiamologShippingMethod.php:40
+Stack trace:
+#0 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/shipping/AbbiamologShippingMethod.php(25): WC_Abbiamolog_Shipping_Method->init()
+#1 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-shipping-zone.php(185): WC_Abbiamolog_Shipping_Method->__construct('10')
+#2 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-shipping.php(162): WC_Shipping_Zone->get_shipping_methods(true)
+#3 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-shipping.php(333): WC_Shipping->load_shipping_methods(Array)
+#4 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-shipping.php(260): WC_Shipping->calculate_shipping_for_package(Array, 0)
+#5 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-cart.php(1391): WC_Shipping->calculate_shipping(Array)
+#6 /var/www/html/wp-content/plugins/woocommerce/include, em /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/shipping/AbbiamologShippingMethod.php, na linha 40
+
+2021-03-30T13:33:29+00:00 CRITICAL Uncaught Error: Class 'GuzzleHttp\Client' not found in /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/shipping/AbbiamologShippingMethod.php:40
+Stack trace:
+#0 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/shipping/AbbiamologShippingMethod.php(25): WC_Abbiamolog_Shipping_Method->init()
+#1 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-shipping-zone.php(185): WC_Abbiamolog_Shipping_Method->__construct('10')
+#2 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-shipping.php(162): WC_Shipping_Zone->get_shipping_methods(true)
+#3 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-shipping.php(333): WC_Shipping->load_shipping_methods(Array)
+#4 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-shipping.php(260): WC_Shipping->calculate_shipping_for_package(Array, 0)
+#5 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-cart.php(1391): WC_Shipping->calculate_shipping(Array)
+#6 /var/www/html/wp-content/plugins/woocommerce/include, em /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/shipping/AbbiamologShippingMethod.php, na linha 40
+
+2021-03-30T13:34:14+00:00 CRITICAL Uncaught Error: Class 'GuzzleHttp\Client' not found in /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/shipping/AbbiamologShippingMethod.php:42
+Stack trace:
+#0 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/shipping/AbbiamologShippingMethod.php(27): WC_Abbiamolog_Shipping_Method->init()
+#1 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-shipping-zone.php(185): WC_Abbiamolog_Shipping_Method->__construct('10')
+#2 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-shipping.php(162): WC_Shipping_Zone->get_shipping_methods(true)
+#3 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-shipping.php(333): WC_Shipping->load_shipping_methods(Array)
+#4 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-shipping.php(260): WC_Shipping->calculate_shipping_for_package(Array, 0)
+#5 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-cart.php(1391): WC_Shipping->calculate_shipping(Array)
+#6 /var/www/html/wp-content/plugins/woocommerce/include, em /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/shipping/AbbiamologShippingMethod.php, na linha 42
+
+2021-03-30T14:17:26+00:00 CRITICAL Uncaught GuzzleHttp\Exception\ClientException: Client error: `POST https://o4z7rpd9qd.execute-api.us-east-1.amazonaws.com/auth/gentoken` resulted in a `403 Forbidden` response:
+{"message":"Forbidden"}
+ in /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guzzlehttp/guzzle/src/Exception/RequestException.php:113
+Stack trace:
+#0 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guzzlehttp/guzzle/src/Middleware.php(69): GuzzleHttp\Exception\RequestException::create(Object(GuzzleHttp\Psr7\Request), Object(GuzzleHttp\Psr7\Response), NULL, Array, NULL)
+#1 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guzzlehttp/promises/src/Promise.php(204): GuzzleHttp\Middleware::GuzzleHttp\{closure}(Object(GuzzleHttp\Psr7\Response))
+#2 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guzzlehttp/promises/src/Promise.php(153): GuzzleHttp\Promise\Promise::callHandler(1, Object(GuzzleHttp\Psr7\Response), NULL)
+#3 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guz, em /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guzzlehttp/guzzle/src/Exception/RequestException.php, na linha 113
+
+2021-03-30T14:18:07+00:00 CRITICAL Uncaught GuzzleHttp\Exception\ClientException: Client error: `POST https://o4z7rpd9qd.execute-api.us-east-1.amazonaws.com/auth/gentoken` resulted in a `403 Forbidden` response:
+{"message":"Forbidden"}
+ in /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guzzlehttp/guzzle/src/Exception/RequestException.php:113
+Stack trace:
+#0 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guzzlehttp/guzzle/src/Middleware.php(69): GuzzleHttp\Exception\RequestException::create(Object(GuzzleHttp\Psr7\Request), Object(GuzzleHttp\Psr7\Response), NULL, Array, NULL)
+#1 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guzzlehttp/promises/src/Promise.php(204): GuzzleHttp\Middleware::GuzzleHttp\{closure}(Object(GuzzleHttp\Psr7\Response))
+#2 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guzzlehttp/promises/src/Promise.php(153): GuzzleHttp\Promise\Promise::callHandler(1, Object(GuzzleHttp\Psr7\Response), NULL)
+#3 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guz, em /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guzzlehttp/guzzle/src/Exception/RequestException.php, na linha 113
+
+2021-03-30T14:19:11+00:00 CRITICAL Uncaught GuzzleHttp\Exception\ClientException: Client error: `POST https://o4z7rpd9qd.execute-api.us-east-1.amazonaws.com/auth/gentoken` resulted in a `403 Forbidden` response:
+{"message":"Forbidden"}
+ in /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guzzlehttp/guzzle/src/Exception/RequestException.php:113
+Stack trace:
+#0 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guzzlehttp/guzzle/src/Middleware.php(69): GuzzleHttp\Exception\RequestException::create(Object(GuzzleHttp\Psr7\Request), Object(GuzzleHttp\Psr7\Response), NULL, Array, NULL)
+#1 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guzzlehttp/promises/src/Promise.php(204): GuzzleHttp\Middleware::GuzzleHttp\{closure}(Object(GuzzleHttp\Psr7\Response))
+#2 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guzzlehttp/promises/src/Promise.php(153): GuzzleHttp\Promise\Promise::callHandler(1, Object(GuzzleHttp\Psr7\Response), NULL)
+#3 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guz, em /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guzzlehttp/guzzle/src/Exception/RequestException.php, na linha 113
+
+2021-03-30T14:21:49+00:00 CRITICAL Uncaught GuzzleHttp\Exception\ClientException: Client error: `POST https://o4z7rpd9qd.execute-api.us-east-1.amazonaws.com/auth/gentoken` resulted in a `403 Forbidden` response:
+{"message":"Forbidden"}
+ in /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guzzlehttp/guzzle/src/Exception/RequestException.php:113
+Stack trace:
+#0 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guzzlehttp/guzzle/src/Middleware.php(69): GuzzleHttp\Exception\RequestException::create(Object(GuzzleHttp\Psr7\Request), Object(GuzzleHttp\Psr7\Response), NULL, Array, NULL)
+#1 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guzzlehttp/promises/src/Promise.php(204): GuzzleHttp\Middleware::GuzzleHttp\{closure}(Object(GuzzleHttp\Psr7\Response))
+#2 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guzzlehttp/promises/src/Promise.php(153): GuzzleHttp\Promise\Promise::callHandler(1, Object(GuzzleHttp\Psr7\Response), NULL)
+#3 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guz, em /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guzzlehttp/guzzle/src/Exception/RequestException.php, na linha 113
+
+2021-03-30T14:23:19+00:00 CRITICAL Uncaught GuzzleHttp\Exception\ClientException: Client error: `POST https://o4z7rpd9qd.execute-api.us-east-1.amazonaws.com/auth/gentoken` resulted in a `403 Forbidden` response:
+{"message":"Forbidden"}
+ in /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guzzlehttp/guzzle/src/Exception/RequestException.php:113
+Stack trace:
+#0 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guzzlehttp/guzzle/src/Middleware.php(69): GuzzleHttp\Exception\RequestException::create(Object(GuzzleHttp\Psr7\Request), Object(GuzzleHttp\Psr7\Response), NULL, Array, NULL)
+#1 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guzzlehttp/promises/src/Promise.php(204): GuzzleHttp\Middleware::GuzzleHttp\{closure}(Object(GuzzleHttp\Psr7\Response))
+#2 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guzzlehttp/promises/src/Promise.php(153): GuzzleHttp\Promise\Promise::callHandler(1, Object(GuzzleHttp\Psr7\Response), NULL)
+#3 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guz, em /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guzzlehttp/guzzle/src/Exception/RequestException.php, na linha 113
+
+2021-03-30T14:23:25+00:00 CRITICAL Uncaught GuzzleHttp\Exception\ClientException: Client error: `POST https://o4z7rpd9qd.execute-api.us-east-1.amazonaws.com/auth/gentoken` resulted in a `403 Forbidden` response:
+{"message":"Forbidden"}
+ in /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guzzlehttp/guzzle/src/Exception/RequestException.php:113
+Stack trace:
+#0 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guzzlehttp/guzzle/src/Middleware.php(69): GuzzleHttp\Exception\RequestException::create(Object(GuzzleHttp\Psr7\Request), Object(GuzzleHttp\Psr7\Response), NULL, Array, NULL)
+#1 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guzzlehttp/promises/src/Promise.php(204): GuzzleHttp\Middleware::GuzzleHttp\{closure}(Object(GuzzleHttp\Psr7\Response))
+#2 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guzzlehttp/promises/src/Promise.php(153): GuzzleHttp\Promise\Promise::callHandler(1, Object(GuzzleHttp\Psr7\Response), NULL)
+#3 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guz, em /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guzzlehttp/guzzle/src/Exception/RequestException.php, na linha 113
+
+2021-03-30T14:23:58+00:00 CRITICAL Uncaught Exception: 4bfcdcek2cmojdhd9ldkg5486m in /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/shipping/AbbiamologShippingMethod.php:42
+Stack trace:
+#0 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/shipping/AbbiamologShippingMethod.php(27): WC_Abbiamolog_Shipping_Method->init()
+#1 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-shipping-zone.php(185): WC_Abbiamolog_Shipping_Method->__construct('10')
+#2 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-shipping.php(162): WC_Shipping_Zone->get_shipping_methods(true)
+#3 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-shipping.php(333): WC_Shipping->load_shipping_methods(Array)
+#4 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-shipping.php(260): WC_Shipping->calculate_shipping_for_package(Array, 0)
+#5 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-cart.php(1391): WC_Shipping->calculate_shipping(Array)
+#6 /var/www/html/wp-content/plugins/woocommerce/includes/cla, em /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/shipping/AbbiamologShippingMethod.php, na linha 42
+
+2021-03-30T14:24:07+00:00 CRITICAL Uncaught Exception: 1ia2f5pgki4e9sbvucnt0fmeu5e0sfu9ds5grsk8lj33rlh2u43c in /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/shipping/AbbiamologShippingMethod.php:42
+Stack trace:
+#0 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/shipping/AbbiamologShippingMethod.php(27): WC_Abbiamolog_Shipping_Method->init()
+#1 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-shipping-zone.php(185): WC_Abbiamolog_Shipping_Method->__construct('10')
+#2 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-shipping.php(162): WC_Shipping_Zone->get_shipping_methods(true)
+#3 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-shipping.php(333): WC_Shipping->load_shipping_methods(Array)
+#4 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-shipping.php(260): WC_Shipping->calculate_shipping_for_package(Array, 0)
+#5 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-cart.php(1391): WC_Shipping->calculate_shipping(Array)
+#6 /var/www/html/wp-content/plugin, em /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/shipping/AbbiamologShippingMethod.php, na linha 42
+
+2021-03-30T14:24:13+00:00 CRITICAL Uncaught GuzzleHttp\Exception\ClientException: Client error: `POST https://o4z7rpd9qd.execute-api.us-east-1.amazonaws.com/auth/gentoken` resulted in a `403 Forbidden` response:
+{"message":"Forbidden"}
+ in /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guzzlehttp/guzzle/src/Exception/RequestException.php:113
+Stack trace:
+#0 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guzzlehttp/guzzle/src/Middleware.php(69): GuzzleHttp\Exception\RequestException::create(Object(GuzzleHttp\Psr7\Request), Object(GuzzleHttp\Psr7\Response), NULL, Array, NULL)
+#1 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guzzlehttp/promises/src/Promise.php(204): GuzzleHttp\Middleware::GuzzleHttp\{closure}(Object(GuzzleHttp\Psr7\Response))
+#2 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guzzlehttp/promises/src/Promise.php(153): GuzzleHttp\Promise\Promise::callHandler(1, Object(GuzzleHttp\Psr7\Response), NULL)
+#3 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guz, em /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guzzlehttp/guzzle/src/Exception/RequestException.php, na linha 113
+
+2021-03-30T14:25:38+00:00 CRITICAL Uncaught Error: Object of class stdClass could not be converted to string in /var/www/html/wp-includes/functions.php:3616
+Stack trace:
+#0 /var/www/html/wp-includes/functions.php(3420): _default_wp_die_handler(Object(stdClass), 'Erro &rsaquo; W...', Array)
+#1 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/shipping/AbbiamologShippingMethod.php(53): wp_die(Object(stdClass))
+#2 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/shipping/AbbiamologShippingMethod.php(27): WC_Abbiamolog_Shipping_Method->init()
+#3 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-shipping-zone.php(185): WC_Abbiamolog_Shipping_Method->__construct('10')
+#4 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-shipping.php(162): WC_Shipping_Zone->get_shipping_methods(true)
+#5 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-shipping.php(333): WC_Shipping->load_shipping_methods(Array)
+#6 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-shipping.php(260): WC_Shipping-, em /var/www/html/wp-includes/functions.php, na linha 3616
+
+2021-03-30T16:08:52+00:00 CRITICAL Uncaught GuzzleHttp\Exception\ClientException: Client error: `GET https://dlah3ejgyf.execute-api.us-east-1.amazonaws.com/prod/shipping?zip_code=&weight=400&price=30000` resulted in a `400 Bad Request` response:
+{"status":"error","message":"zip_code outside the coverage area"}
+ in /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guzzlehttp/guzzle/src/Exception/RequestException.php:113
+Stack trace:
+#0 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guzzlehttp/guzzle/src/Middleware.php(69): GuzzleHttp\Exception\RequestException::create(Object(GuzzleHttp\Psr7\Request), Object(GuzzleHttp\Psr7\Response), NULL, Array, NULL)
+#1 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guzzlehttp/promises/src/Promise.php(204): GuzzleHttp\Middleware::GuzzleHttp\{closure}(Object(GuzzleHttp\Psr7\Response))
+#2 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guzzlehttp/promises/src/Promise.php(153): GuzzleHttp\Promise\Promise::callHandler(1, Object(GuzzleHttp\Psr7\Response),, em /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guzzlehttp/guzzle/src/Exception/RequestException.php, na linha 113
+
+2021-03-30T16:09:25+00:00 CRITICAL Uncaught GuzzleHttp\Exception\ClientException: Client error: `GET https://dlah3ejgyf.execute-api.us-east-1.amazonaws.com/prod/shipping?zip_code=&weight=400&price=30000` resulted in a `400 Bad Request` response:
+{"status":"error","message":"zip_code outside the coverage area"}
+ in /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guzzlehttp/guzzle/src/Exception/RequestException.php:113
+Stack trace:
+#0 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guzzlehttp/guzzle/src/Middleware.php(69): GuzzleHttp\Exception\RequestException::create(Object(GuzzleHttp\Psr7\Request), Object(GuzzleHttp\Psr7\Response), NULL, Array, NULL)
+#1 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guzzlehttp/promises/src/Promise.php(204): GuzzleHttp\Middleware::GuzzleHttp\{closure}(Object(GuzzleHttp\Psr7\Response))
+#2 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guzzlehttp/promises/src/Promise.php(153): GuzzleHttp\Promise\Promise::callHandler(1, Object(GuzzleHttp\Psr7\Response),, em /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guzzlehttp/guzzle/src/Exception/RequestException.php, na linha 113
+
+2021-03-30T16:09:59+00:00 CRITICAL Uncaught GuzzleHttp\Exception\ClientException: Client error: `GET https://dlah3ejgyf.execute-api.us-east-1.amazonaws.com/prod/shipping?zip_code=&weight=400&price=30000` resulted in a `400 Bad Request` response:
+{"status":"error","message":"zip_code outside the coverage area"}
+ in /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guzzlehttp/guzzle/src/Exception/RequestException.php:113
+Stack trace:
+#0 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guzzlehttp/guzzle/src/Middleware.php(69): GuzzleHttp\Exception\RequestException::create(Object(GuzzleHttp\Psr7\Request), Object(GuzzleHttp\Psr7\Response), NULL, Array, NULL)
+#1 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guzzlehttp/promises/src/Promise.php(204): GuzzleHttp\Middleware::GuzzleHttp\{closure}(Object(GuzzleHttp\Psr7\Response))
+#2 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guzzlehttp/promises/src/Promise.php(153): GuzzleHttp\Promise\Promise::callHandler(1, Object(GuzzleHttp\Psr7\Response),, em /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guzzlehttp/guzzle/src/Exception/RequestException.php, na linha 113
+
+2021-03-30T16:10:54+00:00 CRITICAL Uncaught GuzzleHttp\Exception\ClientException: Client error: `GET https://dlah3ejgyf.execute-api.us-east-1.amazonaws.com/prod/shipping?zip_code=&weight=400&price=30000` resulted in a `400 Bad Request` response:
+{"status":"error","message":"zip_code outside the coverage area"}
+ in /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guzzlehttp/guzzle/src/Exception/RequestException.php:113
+Stack trace:
+#0 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guzzlehttp/guzzle/src/Middleware.php(69): GuzzleHttp\Exception\RequestException::create(Object(GuzzleHttp\Psr7\Request), Object(GuzzleHttp\Psr7\Response), NULL, Array, NULL)
+#1 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guzzlehttp/promises/src/Promise.php(204): GuzzleHttp\Middleware::GuzzleHttp\{closure}(Object(GuzzleHttp\Psr7\Response))
+#2 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guzzlehttp/promises/src/Promise.php(153): GuzzleHttp\Promise\Promise::callHandler(1, Object(GuzzleHttp\Psr7\Response),, em /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guzzlehttp/guzzle/src/Exception/RequestException.php, na linha 113
+
+2021-03-30T16:11:36+00:00 CRITICAL Uncaught GuzzleHttp\Exception\ClientException: Client error: `GET https://dlah3ejgyf.execute-api.us-east-1.amazonaws.com/prod/shipping?zip_code=81315380&weight=400&price=30000` resulted in a `400 Bad Request` response:
+{"status":"error","message":"zip_code outside the coverage area"}
+ in /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guzzlehttp/guzzle/src/Exception/RequestException.php:113
+Stack trace:
+#0 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guzzlehttp/guzzle/src/Middleware.php(69): GuzzleHttp\Exception\RequestException::create(Object(GuzzleHttp\Psr7\Request), Object(GuzzleHttp\Psr7\Response), NULL, Array, NULL)
+#1 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guzzlehttp/promises/src/Promise.php(204): GuzzleHttp\Middleware::GuzzleHttp\{closure}(Object(GuzzleHttp\Psr7\Response))
+#2 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guzzlehttp/promises/src/Promise.php(153): GuzzleHttp\Promise\Promise::callHandler(1, Object(GuzzleHttp\Psr7\Re, em /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guzzlehttp/guzzle/src/Exception/RequestException.php, na linha 113
+

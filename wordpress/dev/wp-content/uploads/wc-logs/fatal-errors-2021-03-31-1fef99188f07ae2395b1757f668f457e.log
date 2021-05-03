@@ -1,0 +1,144 @@
+2021-03-31T15:43:43+00:00 CRITICAL Uncaught GuzzleHttp\Exception\ServerException: Server error: `GET https://dlah3ejgyf.execute-api.us-east-1.amazonaws.com/prod/shipping?zip_code=81315380&weight=400&price=30000` resulted in a `502 Bad Gateway` response:
+{"message": "Internal server error"}
+ in /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guzzlehttp/guzzle/src/Exception/RequestException.php:113
+Stack trace:
+#0 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guzzlehttp/guzzle/src/Middleware.php(69): GuzzleHttp\Exception\RequestException::create(Object(GuzzleHttp\Psr7\Request), Object(GuzzleHttp\Psr7\Response), NULL, Array, NULL)
+#1 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guzzlehttp/promises/src/Promise.php(204): GuzzleHttp\Middleware::GuzzleHttp\{closure}(Object(GuzzleHttp\Psr7\Response))
+#2 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guzzlehttp/promises/src/Promise.php(153): GuzzleHttp\Promise\Promise::callHandler(1, Object(GuzzleHttp\Psr7\Response), NULL)
+#3 /var/www/ht, em /var/www/html/wp-content/plugins/woocommerce-abbiamolog/vendor/guzzlehttp/guzzle/src/Exception/RequestException.php, na linha 113
+
+2021-03-31T15:56:34+00:00 CRITICAL Uncaught Error: Class 'AbbiamoOrder' not found in /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/order/AbbiamoOrder.php:100
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(289): wc_abbiamo_create_order(17)
+#1 /var/www/html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 /var/www/html/wp-includes/plugin.php(484): WP_Hook->do_action(Array)
+#3 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-checkout.php(1159): do_action('woocommerce_che...', 17, Array, Object(Automattic\WooCommerce\Admin\Overrides\Order))
+#4 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-ajax.php(465): WC_Checkout->process_checkout()
+#5 /var/www/html/wp-includes/class-wp-hook.php(287): WC_AJAX::checkout('')
+#6 /var/www/html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#7 /var/www/html/wp-includes/plugin.php(484): WP_Hook->do_action(Array)
+#8 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-ajax.php(90): do_action('wc_ajax_check, em /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/order/AbbiamoOrder.php, na linha 100
+
+2021-03-31T15:56:43+00:00 CRITICAL Uncaught Error: Class 'AbbiamoOrder' not found in /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/order/AbbiamoOrder.php:100
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(289): wc_abbiamo_create_order(18)
+#1 /var/www/html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 /var/www/html/wp-includes/plugin.php(484): WP_Hook->do_action(Array)
+#3 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-checkout.php(1159): do_action('woocommerce_che...', 18, Array, Object(Automattic\WooCommerce\Admin\Overrides\Order))
+#4 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-ajax.php(465): WC_Checkout->process_checkout()
+#5 /var/www/html/wp-includes/class-wp-hook.php(287): WC_AJAX::checkout('')
+#6 /var/www/html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#7 /var/www/html/wp-includes/plugin.php(484): WP_Hook->do_action(Array)
+#8 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-ajax.php(90): do_action('wc_ajax_check, em /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/order/AbbiamoOrder.php, na linha 100
+
+2021-03-31T15:57:53+00:00 CRITICAL Uncaught Error: Call to a member function get_order_number() on bool in /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/order/AbbiamoOrder.php:18
+Stack trace:
+#0 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/order/AbbiamoOrder.php(101): AbbiamologOrder->create_abbiamo_invoice()
+#1 /var/www/html/wp-includes/class-wp-hook.php(289): wc_abbiamo_create_order(20)
+#2 /var/www/html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#3 /var/www/html/wp-includes/plugin.php(484): WP_Hook->do_action(Array)
+#4 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-checkout.php(1159): do_action('woocommerce_che...', 20, Array, Object(Automattic\WooCommerce\Admin\Overrides\Order))
+#5 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-ajax.php(465): WC_Checkout->process_checkout()
+#6 /var/www/html/wp-includes/class-wp-hook.php(287): WC_AJAX::checkout('')
+#7 /var/www/html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#8 /var/www/html/wp-i, em /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/order/AbbiamoOrder.php, na linha 18
+
+2021-03-31T16:02:03+00:00 CRITICAL Uncaught Error: Cannot use object of type WC_DateTime as array in /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/order/AbbiamoOrder.php:21
+Stack trace:
+#0 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/order/AbbiamoOrder.php(102): AbbiamologOrder->create_abbiamo_invoice()
+#1 /var/www/html/wp-includes/class-wp-hook.php(289): wc_abbiamo_create_order(28)
+#2 /var/www/html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#3 /var/www/html/wp-includes/plugin.php(484): WP_Hook->do_action(Array)
+#4 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-checkout.php(1159): do_action('woocommerce_che...', 28, Array, Object(Automattic\WooCommerce\Admin\Overrides\Order))
+#5 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-ajax.php(465): WC_Checkout->process_checkout()
+#6 /var/www/html/wp-includes/class-wp-hook.php(287): WC_AJAX::checkout('')
+#7 /var/www/html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#8 /var/www/html/wp-include, em /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/order/AbbiamoOrder.php, na linha 21
+
+2021-03-31T16:34:07+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Order_Item_Product::get_price() in /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/order/AbbiamoOrder.php:95
+Stack trace:
+#0 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/order/AbbiamoOrder.php(110): AbbiamologOrder->create_abbiamo_invoice()
+#1 /var/www/html/wp-includes/class-wp-hook.php(289): wc_abbiamo_create_order(46)
+#2 /var/www/html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#3 /var/www/html/wp-includes/plugin.php(484): WP_Hook->do_action(Array)
+#4 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-checkout.php(1159): do_action('woocommerce_che...', 46, Array, Object(Automattic\WooCommerce\Admin\Overrides\Order))
+#5 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-ajax.php(465): WC_Checkout->process_checkout()
+#6 /var/www/html/wp-includes/class-wp-hook.php(287): WC_AJAX::checkout('')
+#7 /var/www/html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#8 /var/www/ht, em /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/order/AbbiamoOrder.php, na linha 95
+
+2021-03-31T18:55:25+00:00 CRITICAL Uncaught Exception: Missing argument "country". in /var/www/html/wp-content/plugins/ebanx-payment-gateway-for-woocommerce/services/class-wc-ebanx-request.php:29
+Stack trace:
+#0 /var/www/html/wp-content/plugins/ebanx-payment-gateway-for-woocommerce/gateways/class-wc-ebanx-gateway.php(22): WC_EBANX_Request::read('country')
+#1 /var/www/html/wp-includes/class-wp-hook.php(287): ebanx_update_converted_value('')
+#2 /var/www/html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#3 /var/www/html/wp-includes/plugin.php(484): WP_Hook->do_action(Array)
+#4 /var/www/html/wp-admin/admin-ajax.php(184): do_action('wp_ajax_ebanx_u...')
+#5 {main}
+  thrown, em /var/www/html/wp-content/plugins/ebanx-payment-gateway-for-woocommerce/services/class-wc-ebanx-request.php, na linha 29
+
+2021-03-31T18:55:27+00:00 CRITICAL Uncaught Exception: Missing argument "country". in /var/www/html/wp-content/plugins/ebanx-payment-gateway-for-woocommerce/services/class-wc-ebanx-request.php:29
+Stack trace:
+#0 /var/www/html/wp-content/plugins/ebanx-payment-gateway-for-woocommerce/gateways/class-wc-ebanx-gateway.php(22): WC_EBANX_Request::read('country')
+#1 /var/www/html/wp-includes/class-wp-hook.php(287): ebanx_update_converted_value('')
+#2 /var/www/html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#3 /var/www/html/wp-includes/plugin.php(484): WP_Hook->do_action(Array)
+#4 /var/www/html/wp-admin/admin-ajax.php(184): do_action('wp_ajax_ebanx_u...')
+#5 {main}
+  thrown, em /var/www/html/wp-content/plugins/ebanx-payment-gateway-for-woocommerce/services/class-wc-ebanx-request.php, na linha 29
+
+2021-03-31T19:11:07+00:00 CRITICAL Uncaught Error: Call to undefined method Automattic\WooCommerce\Admin\Overrides\Order::get_billing_poscode() in /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/order/AbbiamoOrder.php:144
+Stack trace:
+#0 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/order/AbbiamoOrder.php(30): AbbiamologOrder->get_destination_address()
+#1 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/order/AbbiamoOrder.php(156): AbbiamologOrder->create_abbiamo_invoice()
+#2 /var/www/html/wp-includes/class-wp-hook.php(289): wc_abbiamo_create_order(72)
+#3 /var/www/html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#4 /var/www/html/wp-includes/plugin.php(484): WP_Hook->do_action(Array)
+#5 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-checkout.php(1159): do_action('woocommerce_che...', 72, Array, Object(Automattic\WooCommerce\Admin\Overrides\Order))
+#6 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-ajax.php(465): WC_Checkout->process_checkout()
+#7 /var/, em /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/order/AbbiamoOrder.php, na linha 144
+
+2021-03-31T19:11:21+00:00 CRITICAL Uncaught Error: Call to undefined method Automattic\WooCommerce\Admin\Overrides\Order::get_billing_poscode() in /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/order/AbbiamoOrder.php:144
+Stack trace:
+#0 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/order/AbbiamoOrder.php(30): AbbiamologOrder->get_destination_address()
+#1 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/order/AbbiamoOrder.php(156): AbbiamologOrder->create_abbiamo_invoice()
+#2 /var/www/html/wp-includes/class-wp-hook.php(289): wc_abbiamo_create_order(73)
+#3 /var/www/html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#4 /var/www/html/wp-includes/plugin.php(484): WP_Hook->do_action(Array)
+#5 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-checkout.php(1159): do_action('woocommerce_che...', 73, Array, Object(Automattic\WooCommerce\Admin\Overrides\Order))
+#6 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-ajax.php(465): WC_Checkout->process_checkout()
+#7 /var/, em /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/order/AbbiamoOrder.php, na linha 144
+
+2021-03-31T19:11:33+00:00 CRITICAL Uncaught Error: Call to undefined method Automattic\WooCommerce\Admin\Overrides\Order::get_billing_poscode() in /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/order/AbbiamoOrder.php:144
+Stack trace:
+#0 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/order/AbbiamoOrder.php(30): AbbiamologOrder->get_destination_address()
+#1 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/order/AbbiamoOrder.php(156): AbbiamologOrder->create_abbiamo_invoice()
+#2 /var/www/html/wp-includes/class-wp-hook.php(289): wc_abbiamo_create_order(74)
+#3 /var/www/html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#4 /var/www/html/wp-includes/plugin.php(484): WP_Hook->do_action(Array)
+#5 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-checkout.php(1159): do_action('woocommerce_che...', 74, Array, Object(Automattic\WooCommerce\Admin\Overrides\Order))
+#6 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-ajax.php(465): WC_Checkout->process_checkout()
+#7 /var/, em /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/order/AbbiamoOrder.php, na linha 144
+
+2021-03-31T19:16:55+00:00 CRITICAL Uncaught Error: Class 'Client' not found in /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/order/AbbiamoOrder.php:15
+Stack trace:
+#0 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/order/AbbiamoOrder.php(177): AbbiamologOrder->__construct(79)
+#1 /var/www/html/wp-includes/class-wp-hook.php(289): wc_abbiamo_create_order(79)
+#2 /var/www/html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#3 /var/www/html/wp-includes/plugin.php(484): WP_Hook->do_action(Array)
+#4 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-checkout.php(1159): do_action('woocommerce_che...', 79, Array, Object(Automattic\WooCommerce\Admin\Overrides\Order))
+#5 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-ajax.php(465): WC_Checkout->process_checkout()
+#6 /var/www/html/wp-includes/class-wp-hook.php(287): WC_AJAX::checkout('')
+#7 /var/www/html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#8 /var/www/html/wp-includes/plugin.php(484): WP_Hook->do_, em /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/order/AbbiamoOrder.php, na linha 15
+
+2021-03-31T19:44:11+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function WC_DateTime::date(), 0 passed in /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/order/AbbiamoOrder.php on line 41 and exactly 1 expected in /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-datetime.php:89
+Stack trace:
+#0 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/order/AbbiamoOrder.php(41): WC_DateTime->date()
+#1 /var/www/html/wp-content/plugins/woocommerce-abbiamolog/src/order/AbbiamoOrder.php(187): AbbiamologOrder->create_abbiamo_invoice()
+#2 /var/www/html/wp-includes/class-wp-hook.php(289): wc_abbiamo_create_order(92)
+#3 /var/www/html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#4 /var/www/html/wp-includes/plugin.php(484): WP_Hook->do_action(Array)
+#5 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-checkout.php(1159): do_action('woocommerce_che...', 92, Array, Object(Automattic\WooCommerce\Admin\Overrides\Order))
+#6 /var/www/html/wp-content/plugins/woocommerce/incl, em /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-datetime.php, na linha 89
+
