@@ -1,5 +1,10 @@
 <?
 
+/* Exit if accessed directly */
+if (!defined('ABSPATH')) {
+  exit;
+}
+
 namespace WooCommerce\Abbiamo\Repository;
 
 class AbbiamoRepository {

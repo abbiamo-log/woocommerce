@@ -1,5 +1,10 @@
 <?
 
+/* Exit if accessed directly */
+if (!defined('ABSPATH')) {
+  exit;
+}
+
 namespace WooCommerce\Abbiamo\Http;
 
 use GuzzleHttp\Client;

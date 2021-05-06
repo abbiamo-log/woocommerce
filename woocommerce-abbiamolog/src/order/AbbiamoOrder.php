@@ -1,5 +1,10 @@
 <?
 
+/* Exit if accessed directly */
+if (!defined('ABSPATH')) {
+  exit;
+}
+
 use WooCommerce\Abbiamo\Http\AbbiamoHttpHandler;
 use WooCommerce\Abbiamo\Repository\AbbiamoRepository;
 
