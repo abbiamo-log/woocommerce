@@ -8,22 +8,18 @@
  * Author URI: https://www.abbiamolog.com
  *
  * WC requires at least: 3.9.3
- * WC tested up to: 4.9.1
+ * WC tested up to: 5.6
  *
  * License: GNU General Public License Version 3
  * License URI: https://www.gnu.org/licenses/gpl-3.0.html
  */
 
-if(!isset($_SESSION)) {
-  session_start();
-}
-
-use WooCommerce\Abbiamo\Repository\AbbiamoRepository;
-
 /* Exit if accessed directly */
 if (!defined('ABSPATH')) {
   exit;
 }
+
+use WooCommerce\Abbiamo\Repository\AbbiamoRepository;
 
 class WooCommerceAbbiamo {
   function init() {
@@ -36,8 +32,8 @@ class WooCommerceAbbiamo {
       add_action('woocommerce_after_shipping_rate', array( $this, 'shipping_delivery_forecast' ), 100);
 
       require_once(ABBIAMO_FILE_PATH . '/vendor/autoload.php');
-      require_once(ABBIAMO_FILE_PATH . '/src/shipping/AbbiamologShippingMethod.php');
-      require_once(ABBIAMO_FILE_PATH . '/src/order/AbbiamoOrder.php');
+      require_once(ABBIAMO_FILE_PATH . '/src/Shipping/AbbiamologShippingMethod.php');
+      require_once(ABBIAMO_FILE_PATH . '/src/Order/AbbiamoOrder.php');
   }
 
   function activate() {
@@ -63,7 +59,7 @@ class WooCommerceAbbiamo {
 
     define('ABBIAMOLOG_FILE_PATH', dirname(__FILE__));
 
-    include_once('src/install/abbiamo-shipping-install-table.php');
+    include_once('src/Install/abbiamo-shipping-install-table.php');
     wc_abbiamo_install_table();
   }
 

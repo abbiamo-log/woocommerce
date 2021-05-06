@@ -1,5 +1,10 @@
 <?
 
+/* Exit if accessed directly */
+if (!defined('ABSPATH')) {
+  exit;
+}
+
 use WooCommerce\Abbiamo\Http\AbbiamoHttpHandler;
 
 if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
@@ -75,7 +80,7 @@ function abbiamolog_shipping_method_init() {
 	        $width  = empty($product->get_width()) ? 100 : intval($product->get_width());
 					$volume = $volume + ($width * $length * $height) * $quantity;
 
-					$weight       = empty($product->get_weight()) ? 500 : intval($product->get_weight()) * 1000;
+					$weight       = empty($product->get_weight()) ? 100 : intval($product->get_weight()) * 1000;
 					$total_weight = $total_weight + ($weight) * $quantity;
 
 					$price  = $price + ($product->get_price() * 100) * $quantity;
