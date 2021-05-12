@@ -1,11 +1,11 @@
 <?
 
+use WooCommerce\Abbiamo\Http\AbbiamoHttpHandler;
+
 /* Exit if accessed directly */
 if (!defined('ABSPATH')) {
   exit;
 }
-
-use WooCommerce\Abbiamo\Http\AbbiamoHttpHandler;
 
 if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
 
