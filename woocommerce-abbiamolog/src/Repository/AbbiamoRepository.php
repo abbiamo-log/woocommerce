@@ -34,6 +34,11 @@ class AbbiamoRepository {
     $table_name = $wpdb->prefix.self::TABLE_NAME;
 
     $result = $wpdb->get_results("SELECT * FROM {$table_name} where order_id = {$order_id}");
-    return $result;
+
+    if ( isset( $result[0] ) ) {
+      return $result[0];
+    }
+
+    return null;
   }
 }

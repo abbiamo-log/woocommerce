@@ -31,7 +31,7 @@ class WooCommerceAbbiamo {
       add_action('woocommerce_settings_tabs_abbiamo_shipping',  array($this, 'settings_tab'));
       add_action('woocommerce_update_options_abbiamo_shipping', array($this, 'update_settings'));
       add_action('woocommerce_after_shipping_rate', array( $this, 'shipping_delivery_forecast' ), 100);
-      add_action('woocommerce_order_details_after_order_table_items', array( $this, 'order_traking' ), 1);
+      add_action('woocommerce_order_details_after_order_table_items', array( $this, 'order_tracking' ), 1);
 
       add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), array( $this, 'plugin_action_links' ) );
 
@@ -89,7 +89,7 @@ class WooCommerceAbbiamo {
           </div>";
       echo "<h3>".__('Configurações gerais', 'abbiamolog')."</h3>";
       woocommerce_admin_fields( $this->get_shipments_settings() );
-      echo "<h3>".__('Habilitar Modo Test', 'abbiamolog')."</h3>";
+      echo "<h3>".__('Habilitar modo de teste', 'abbiamolog')."</h3>";
       woocommerce_admin_fields( $this->get_sandbox_setting() );
       echo "<h3>".__('Configurações de Loja', 'abbiamolog')."</h3>";
       woocommerce_admin_fields( $this->get_shop_settings() );
@@ -358,22 +358,22 @@ class WooCommerceAbbiamo {
    *
    * @param WC_Order $order Order data.
    */
-  public function order_traking ( $order ) {
+  public function order_tracking ( $order ) {
     if ($order->get_shipping_method() != 'Abbiamo') {
       return;
     }
 
-    $abbiamo_tracking = AbbiamoRepository::get_all( $order->get_id() );
+    $abbiamo_tracking = AbbiamoRepository::get_one_by_id( $order->get_id() );
 
-    if ( isset($abbiamo_tracking) ) {
+    if ( isset($abbiamo_tracking->tracking) ) {
       wc_get_template(
-  			'tracking-link.php',
-  			array(
-          'tracking_code' => $abbiamo_tracking[0]->tracking,
+        'tracking-link.php',
+        array(
+          'tracking_code' => $abbiamo_tracking->tracking,
         ),
-  			'',
-  			ABBIAMO_FILE_PATH . 'templates/'
-  		);
+        '',
+        ABBIAMO_FILE_PATH . 'templates/'
+      );
     }
   }
 }
