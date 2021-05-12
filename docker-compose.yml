@@ -28,7 +28,6 @@ services:
         define('WP_DEBUG_LOG',     true);
         define('WP_DEBUG_DISPLAY', true);
     volumes:
-      - ./wordpress/dev/wp-content/uploads:/var/www/html/wp-content/uploads
       - ./woocommerce-extra-checkout-fields-for-brazil:/var/www/html/wp-content/plugins/woocommerce-extra-checkout-fields-for-brazil
       - ./woocommerce-abbiamolog:/var/www/html/wp-content/plugins/woocommerce-abbiamolog
     ports:
