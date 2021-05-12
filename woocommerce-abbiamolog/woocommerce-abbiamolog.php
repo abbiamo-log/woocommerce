@@ -31,6 +31,8 @@ class WooCommerceAbbiamo {
       add_action('woocommerce_update_options_abbiamo_shipping', array($this, 'update_settings'));
       add_action('woocommerce_after_shipping_rate', array( $this, 'shipping_delivery_forecast' ), 100);
 
+      add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), array( $this, 'plugin_action_links' ) );
+
       require_once(ABBIAMO_FILE_PATH . '/vendor/autoload.php');
       require_once(ABBIAMO_FILE_PATH . '/src/Shipping/AbbiamologShippingMethod.php');
       require_once(ABBIAMO_FILE_PATH . '/src/Order/AbbiamoOrder.php');
@@ -271,6 +273,9 @@ class WooCommerceAbbiamo {
       add_submenu_page('woocommerce', __('Abbiamo', 'abbiamolog'), __('Abbiamo', 'abbiamolog'), 'manage_woocommerce', 'abbiamolog', array($this, 'display_export_page'), 8);
   }
 
+  /**
+    * @return string
+    */
   function display_export_page() {
     ?>
       <div class="wrap">
@@ -301,6 +306,11 @@ class WooCommerceAbbiamo {
     <?
   }
 
+  /**
+    * @param array $shipping_method
+    *
+    * @return string
+    */
   function shipping_delivery_forecast( $shipping_method ) {
 		$meta_data = $shipping_method->get_meta_data();
 		$abbiamo   = isset($meta_data['abbiamo_delivery']) ? $meta_data['abbiamo_delivery'] : false ;
@@ -308,6 +318,20 @@ class WooCommerceAbbiamo {
 		if ( $abbiamo ) {
 			echo '<p><small>Entrega em 1 dia útil após expedição</small></p>';
 		}
+	}
+
+  /**
+	 * Action links.
+	 *
+	 * @param  array $links Default plugin links.
+	 *
+	 * @return array
+	 */
+	public function plugin_action_links( $links ) {
+		$plugin_links   = array();
+		$plugin_links[] = '<a href="' . esc_url( admin_url( 'admin.php?page=wc-settings&tab=abbiamo_shipping' ) ) . '">Configurações</a>';
+
+		return array_merge( $plugin_links, $links );
 	}
 }
 
