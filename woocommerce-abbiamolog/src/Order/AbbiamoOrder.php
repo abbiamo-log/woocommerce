@@ -115,8 +115,8 @@ if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
           'phone' => $this->order->get_billing_phone(),
           'document_type' => 'cpf',
           'document_number' => $this->order->get_meta('_billing_cpf'),
-          'first_name' => $this->order->get_billing_first_name(),
-          'last_name' => $this->order->get_billing_last_name(),
+          'first_name' => $this->order->get_shipping_first_name(),
+          'last_name' => $this->order->get_shipping_last_name(),
         ];
       }
 
@@ -125,8 +125,8 @@ if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
         'phone' => $this->order->get_billing_phone(),
         'document_type' => 'cnpj',
         'document_number' => $this->order->get_meta('_billing_cnpj'),
-        'company_name' => $this->order->get_billing_company(),
-        'trading_name' => $this->order->get_billing_company(),
+        'company_name' => $this->order->get_shipping_company(),
+        'trading_name' => $this->order->get_shipping_company(),
         'state_registration' => '',
       ];
     }
