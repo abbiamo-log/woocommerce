@@ -1,11 +1,12 @@
 <?
 
+namespace WooCommerce\Abbiamo\Repository;
+
 /* Exit if accessed directly */
 if (!defined('ABSPATH')) {
   exit;
 }
 
-namespace WooCommerce\Abbiamo\Repository;
 
 class AbbiamoRepository {
   const TABLE_NAME      = 'woocommerce_abbiamolog';
@@ -26,5 +27,13 @@ class AbbiamoRepository {
 
       $result = $wpdb->get_results("SELECT * FROM {$table_name} ORDER BY id DESC");
       return $result;
+  }
+
+  public static function get_one_by_id( $order_id ) {
+    global $wpdb;
+    $table_name = $wpdb->prefix.self::TABLE_NAME;
+
+    $result = $wpdb->get_results("SELECT * FROM {$table_name} where order_id = {$order_id}");
+    return $result;
   }
 }

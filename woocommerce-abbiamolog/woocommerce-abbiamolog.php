@@ -24,12 +24,14 @@ use WooCommerce\Abbiamo\Repository\AbbiamoRepository;
 class WooCommerceAbbiamo {
   function init() {
       define('ABBIAMO_FILE_PATH', plugin_dir_path(__FILE__));
+      define('ABBIAMO_URL', plugin_dir_url( __FILE__ ) . DIRECTORY_SEPARATOR );
 
       add_action('admin_menu', array($this, 'add_export_tab'));
       add_filter('woocommerce_settings_tabs_array',            array($this, 'add_settings_tab'), 50);
       add_action('woocommerce_settings_tabs_abbiamo_shipping',  array($this, 'settings_tab'));
       add_action('woocommerce_update_options_abbiamo_shipping', array($this, 'update_settings'));
       add_action('woocommerce_after_shipping_rate', array( $this, 'shipping_delivery_forecast' ), 100);
+      add_action('woocommerce_order_details_after_order_table_items', array( $this, 'order_traking' ), 1);
 
       add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), array( $this, 'plugin_action_links' ) );
 
@@ -87,6 +89,8 @@ class WooCommerceAbbiamo {
           </div>";
       echo "<h3>".__('Configurações gerais', 'abbiamolog')."</h3>";
       woocommerce_admin_fields( $this->get_shipments_settings() );
+      echo "<h3>".__('Habilitar Modo Test', 'abbiamolog')."</h3>";
+      woocommerce_admin_fields( $this->get_sandbox_setting() );
       echo "<h3>".__('Configurações de Loja', 'abbiamolog')."</h3>";
       woocommerce_admin_fields( $this->get_shop_settings() );
       echo "<h3>".__('Endereço de coleta', 'abbiamolog')."</h3>";
@@ -95,6 +99,7 @@ class WooCommerceAbbiamo {
 
   public function update_settings() {
       woocommerce_update_options( $this->get_shipments_settings() );
+      woocommerce_update_options( $this->get_sandbox_setting() );
       woocommerce_update_options( $this->get_shop_settings() );
       woocommerce_update_options( $this->get_pickup_settings() );
   }
@@ -107,7 +112,7 @@ class WooCommerceAbbiamo {
               'css'      => 'width:500px;',
               'desc'     => '',
               'default'  => '',
-              'id'       => 'wc_settings_tab_abbiamolog_client_id'
+              'id'       => 'wc_settings_tab_abbiamolog_client_id',
           ),
           'ABBIAMOLOG_SECRET_KEY' => array(
               'name'     => __('Senha', 'abbiamo'),
@@ -115,9 +120,22 @@ class WooCommerceAbbiamo {
               'css'      => 'width:500px;',
               'desc'     => '',
               'default'  => '',
-              'id'       => 'wc_settings_tab_abbiamolog_secret_key'
+              'id'       => 'wc_settings_tab_abbiamolog_secret_key',
           ),
       );
+  }
+
+  public function get_sandbox_setting() {
+    return array(
+      'ABBIAMOLOG_SANDBOX_ENABLE' => array(
+          'name'     => '',
+          'desc'     => __('Ativar modo teste', 'abbiamo'),
+          'desc_tip' => __('Marque esta opção se deseja utilizar sandbox', 'jadlog'),
+          'type'        => 'checkbox',
+          'default'     => 'no',
+          'id'          => 'wc_settings_tab_abbiamolog_sandbox',
+      ),
+    );
   }
 
   public function get_pickup_settings() {
@@ -311,7 +329,7 @@ class WooCommerceAbbiamo {
     *
     * @return string
     */
-  function shipping_delivery_forecast( $shipping_method ) {
+  public function shipping_delivery_forecast( $shipping_method ) {
 		$meta_data = $shipping_method->get_meta_data();
 		$abbiamo   = isset($meta_data['abbiamo_delivery']) ? $meta_data['abbiamo_delivery'] : false ;
 
@@ -333,6 +351,31 @@ class WooCommerceAbbiamo {
 
 		return array_merge( $plugin_links, $links );
 	}
+
+
+  /**
+   * Action hook fired after the order details.
+   *
+   * @param WC_Order $order Order data.
+   */
+  public function order_traking ( $order ) {
+    if ($order->get_shipping_method() != 'Abbiamo') {
+      return;
+    }
+
+    $abbiamo_tracking = AbbiamoRepository::get_all( $order->get_id() );
+
+    if ( isset($abbiamo_tracking) ) {
+      wc_get_template(
+  			'tracking-link.php',
+  			array(
+          'tracking_code' => $abbiamo_tracking[0]->tracking,
+        ),
+  			'',
+  			ABBIAMO_FILE_PATH . 'templates/'
+  		);
+    }
+  }
 }
 
 $abbiamo_woocommerce = new WooCommerceAbbiamo();

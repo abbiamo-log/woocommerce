@@ -1,19 +1,20 @@
 <?
 
+namespace WooCommerce\Abbiamo\Http;
+
 /* Exit if accessed directly */
 if (!defined('ABSPATH')) {
   exit;
 }
 
-namespace WooCommerce\Abbiamo\Http;
-
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
 
 class AbbiamoHttpHandler {
-  private const OAUTH_URL = 'https://9ke2hmv7vg.execute-api.us-east-1.amazonaws.com/prod/auth/gentoken';
-  private const SHIPPING_URL = 'https://dlah3ejgyf.execute-api.us-east-1.amazonaws.com/prod/shipping';
-  private const ORDER_URL = 'https://lqwrlnop9b.execute-api.us-east-1.amazonaws.com/prod/v1/order';
+  private const OAUTH_URL = 'https://oauth.abbiamolog.com/auth/gentoken';
+  private const SHIPPING_URL = 'https://shipping.abbiamolog.com/shipping';
+  private const ORDER_URL = 'https://api.abbiamolog.com/v1/order';
+  private const ORDER_SANDBOX_URL = 'https://sandbox-api.abbiamolog.com/v1/order';
 
   public function __construct() {
     $this->client = new Client();
@@ -22,8 +23,9 @@ class AbbiamoHttpHandler {
   public function create_abbiamo_order( $order_request ) {
     try {
       $access_token = $this->get_access_token();
+      $order_url    = get_option('wc_settings_tab_abbiamolog_sandbox') === 'no' ? self::ORDER_URL : self::ORDER_SANDBOX_URL;
 
-      $response = $this->client->post(self::ORDER_URL, [
+      $response = $this->client->post($order_url, [
         'body' => json_encode($order_request),
         'headers' => [
           'Content-Type' => 'application/json',
