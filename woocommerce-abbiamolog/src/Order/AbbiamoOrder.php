@@ -75,7 +75,7 @@ if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
         $product   = $item->get_product();
 
         $quantity = $item->get_quantity();
-        $weight   = empty($product->get_weight()) ? 100 : intval($product->get_weight()) * 1000;
+        $weight   = empty($product->get_weight()) ? 500 : intval($product->get_weight()) * 1000;
         $height   = empty($product->get_height()) ? 100 : intval($product->get_height());
         $length   = empty($product->get_length()) ? 100 : intval($product->get_length());
         $width    = empty($product->get_width()) ? 100 : intval($product->get_width());

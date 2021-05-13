@@ -301,10 +301,10 @@ class WooCommerceAbbiamo {
           <thead>
             <tr>
               <th scope="col" id="order_id"        class="manage-column column-order_number">
-                  <?= __('Número do pedido', 'abbiamolog') ?>
+                  <?php echo 'Número do pedido'; ?>
               </th>
               <th scope="col" id="order_date"      class="manage-column column-order_tracking">
-                  <?= __('Tracking do pedido', 'abbiamolog') ?>
+                  <?php echo 'Tracking do pedido'; ?>
               </th>
             </tr>
           </thead>
@@ -314,8 +314,8 @@ class WooCommerceAbbiamo {
               foreach ($orders as $order) {
             ?>
             <tr>
-              <td><?= $order->order_id ?></td>
-              <td><a href="http://meupedido.abbiamolog.com/<?= $order->tracking ?>">Tracking - <?= $order->tracking ?><a/></td>
+              <td><?php echo $order->order_id; ?></td>
+              <td><a href="http://meupedido.abbiamolog.com/<?php echo $order->tracking; ?>">Tracking - <?php echo $order->tracking; ?><a/></td>
             </tr>
             <? } ?>
           </tbody>

@@ -11,6 +11,6 @@ if ( ! defined( 'ABSPATH' ) ) {
   </div>
   <div style="margin-bottom: 15px;">
     <a style="text-decoration: none; color: #333333; font-weight: 400; font-size: 20px;
-" href="https://meupedido.abbiamolog.com/<?= $tracking_code ?>" target="_blank">Acompanhe seu pedido <span style="color: rgb(110, 215, 150);">AQUI</span></a>
+" href="https://meupedido.abbiamolog.com/<?php echo $tracking_code; ?>" target="_blank">Acompanhe seu pedido <span style="color: rgb(110, 215, 150);">AQUI</span></a>
   </div>
 </div>
