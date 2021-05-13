@@ -1,10 +1,11 @@
 == Abbiamo Shipping Plugin For WooCommerce ==
 
 Contributors: devabbiamo
+Tags: shipping, delivery, woocommerce
 License: GPLv2 or later
-Tested up to: 5.4
+Tested up to: 5.7
 Stable tag: 0.0.4
-Requires PHP: 5.6  
+Requires PHP: 5.6
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
