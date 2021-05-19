@@ -72,7 +72,7 @@ function abbiamolog_shipping_method_init() {
 				$total_weight = 0;
 				$price  = 0;
 				foreach ($items as $item) {
-					$quantity = $item['quantity'];
+					$quantity = intval( $item['quantity'] );
 					$product  = wc_get_product($item['product_id']);
 
 					$height = empty($product->get_height()) ? 100 : intval($product->get_height());
@@ -83,7 +83,7 @@ function abbiamolog_shipping_method_init() {
 					$weight       = empty($product->get_weight()) ? 500 : intval($product->get_weight()) * 1000;
 					$total_weight = $total_weight + ($weight) * $quantity;
 
-					$price  = $price + ($product->get_price() * 100) * $quantity;
+					$price  = $price + ( intval( (float) $product->get_price() * 100 ) ) * $quantity;
 				}
 
 				$cost = $this->abbiamo_handler->get_shipping_rate($postcode, $price, $total_weight);
