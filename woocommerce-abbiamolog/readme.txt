@@ -35,12 +35,18 @@ Requer WooCommerce 3.0 ou posterior para funcionar.
 
 == Changelog ==
 
+= 1.0.0 =
+* Corrigido problema do amount quando é adicionado valor com mais de 2 casa decimais
+
 = 0.0.4 =
 * Adicionado modo sandbox para testes
 * Adicionado na tela de pedidos o tracking
 
 
 == Upgrade Notice ==
+
+= 1.0.0 =
+* Lançado versão 1.0.0 do plugin
 
 = 0.0.4 =
 * Adicionado modo sandbox para testes

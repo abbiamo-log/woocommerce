@@ -57,7 +57,7 @@ if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
 
       foreach ( $this->order->get_items() as $item ) {
         $product = $item->get_product();
-        $total   = $total + ( $product->get_price() * 100 );
+        $total   = $total + ( intval ( (float) $product->get_price() * 100 ) );
       }
 
       return $total;
@@ -74,8 +74,8 @@ if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
       foreach ($this->order->get_items() as $item) {
         $product   = $item->get_product();
 
-        $quantity = $item->get_quantity();
-        $weight   = empty($product->get_weight()) ? 500 : intval($product->get_weight()) * 1000;
+        $quantity = intval( $item->get_quantity() );
+        $weight   = empty($product->get_weight()) ? 500 : intval( (float) $product->get_weight() * 1000 );
         $height   = empty($product->get_height()) ? 100 : intval($product->get_height());
         $length   = empty($product->get_length()) ? 100 : intval($product->get_length());
         $width    = empty($product->get_width()) ? 100 : intval($product->get_width());
@@ -93,7 +93,7 @@ if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
           'name'      => $product->get_name() ?? 'name',
           'sku'       => $sku,
           'quantity'  => $quantity,
-          'amount'    => $product->get_price() * 100,
+          'amount'    => intval( (float) $product->get_price() * 100 ),
           'weight'    => $weight,
         ];
       }
