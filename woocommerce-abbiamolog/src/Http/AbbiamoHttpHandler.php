@@ -39,6 +39,9 @@ class AbbiamoHttpHandler {
     } catch (ClientException $e) {
       error_log($e->getMessage());
       return null;
+    } catch (\Exception $e) {
+      error_log($e->getMessage());
+      return null;
     }
   }
 
@@ -58,21 +61,29 @@ class AbbiamoHttpHandler {
       return $response_body['amount'];
     } catch (ClientException $e) {
       return null;
+    } catch (\Exception $e) {
+      error_log($e->getMessage());
+      return null;
     }
   }
 
   private function get_access_token() {
-    $response = $this->client->post(self::OAUTH_URL, [
-      'body' => json_encode([
-        'username' => get_option('wc_settings_tab_abbiamolog_client_id'),
-        'password' => get_option('wc_settings_tab_abbiamolog_secret_key'),
-      ]),
-      'headers' => [
-        'Content-Type' => 'application/json',
-      ],
-    ]);
-    $response_body = json_decode((string) $response->getBody(), true);
+    try {
+      $response = $this->client->post(self::OAUTH_URL, [
+        'body' => json_encode([
+          'username' => get_option('wc_settings_tab_abbiamolog_client_id'),
+          'password' => get_option('wc_settings_tab_abbiamolog_secret_key'),
+        ]),
+        'headers' => [
+          'Content-Type' => 'application/json',
+        ],
+      ]);
+      $response_body = json_decode((string) $response->getBody(), true);
 
-    return $response_body['access_token'];
+      return $response_body['access_token'];
+    } catch (\Exception $e) {
+      error_log($e->getMessage());
+      return null;
+    }
   }
 }
