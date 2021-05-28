@@ -11,10 +11,10 @@ use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
 
 class AbbiamoHttpHandler {
-  private const OAUTH_URL = 'https://oauth.abbiamolog.com/auth/gentoken';
-  private const SHIPPING_URL = 'https://shipping.abbiamolog.com/shipping';
-  private const ORDER_URL = 'https://api.abbiamolog.com/v1/order';
-  private const ORDER_SANDBOX_URL = 'https://sandbox-api.abbiamolog.com/v1/order';
+  private const OAUTH_URL = 'https://9ke2hmv7vg.execute-api.us-east-1.amazonaws.com/prod/auth/gentoken';
+  private const SHIPPING_URL = 'https://dlah3ejgyf.execute-api.us-east-1.amazonaws.com/prod/shipping';
+  private const ORDER_URL = 'https://lqwrlnop9b.execute-api.us-east-1.amazonaws.com/prod/v1/order';
+  private const ORDER_SANDBOX_URL = 'https://8m9qargprc.execute-api.us-east-1.amazonaws.com/sandbox/v1/order';
 
   public function __construct() {
     $this->client = new Client();
