@@ -4,7 +4,7 @@ Contributors: devabbiamo
 Tags: shipping, delivery, woocommerce
 License: GPLv2 or later
 Tested up to: 5.7
-Stable tag: 0.0.4
+Stable tag: 1.0.1
 Requires PHP: 5.6
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -35,9 +35,11 @@ Requer WooCommerce 3.0 ou posterior para funcionar.
 
 == Changelog ==
 
-= 0.0.5 =
-* Corrigido problema do amount quando é adicionado valor com mais de 2 casa decimais
+= 1.0.1 =
 * Corrigido problema de host não encontrado
+
+= 1.0.0 =
+* Corrigido problema do amount quando é adicionado valor com mais de 2 casa decimais
 
 = 0.0.4 =
 * Adicionado modo sandbox para testes
@@ -46,9 +48,11 @@ Requer WooCommerce 3.0 ou posterior para funcionar.
 
 == Upgrade Notice ==
 
-= 0.0.5 =
-* Corrigido problema do amount quando é adicionado valor com mais de 2 casa decimais
+= 1.0.1 =
 * Corrigido problema de host não encontrado
+
+= 1.0.0 =
+* Corrigido problema do amount quando é adicionado valor com mais de 2 casa decimais
 
 = 0.0.4 =
 * Adicionado modo sandbox para testes
