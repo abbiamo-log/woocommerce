@@ -23,7 +23,7 @@ class AbbiamoHttpHandler {
   public function create_abbiamo_order( $order_request ) {
     try {
       $access_token = $this->get_access_token();
-      $order_url    = get_option('wc_settings_tab_abbiamolog_sandbox') === 'no' ? self::ORDER_URL : self::ORDER_SANDBOX_URL;
+      $order_url    = get_option('wc_settings_tab_abbiamolog_sandbox') != 'yes' ? self::ORDER_URL : self::ORDER_SANDBOX_URL;
 
       $response = $this->client->post($order_url, [
         'body' => json_encode($order_request),

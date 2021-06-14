@@ -35,6 +35,9 @@ Requer WooCommerce 3.0 ou posterior para funcionar.
 
 == Changelog ==
 
+= 1.0.2 =
+* Corrigido problema de enviar pedidos para sandbox
+
 = 1.0.1 =
 * Corrigido problema de host não encontrado
 
@@ -45,8 +48,10 @@ Requer WooCommerce 3.0 ou posterior para funcionar.
 * Adicionado modo sandbox para testes
 * Adicionado na tela de pedidos o tracking
 
-
 == Upgrade Notice ==
+
+= 1.0.2 =
+* Corrigido problema de enviar pedidos para sandbox
 
 = 1.0.1 =
 * Corrigido problema de host não encontrado
