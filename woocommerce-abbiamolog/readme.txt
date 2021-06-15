@@ -4,7 +4,7 @@ Contributors: devabbiamo
 Tags: shipping, delivery, woocommerce
 License: GPLv2 or later
 Tested up to: 5.7
-Stable tag: 1.0.3
+Stable tag: 1.0.4
 Requires PHP: 5.6
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -34,6 +34,9 @@ Requer WooCommerce 3.0 ou posterior para funcionar.
 * Ter instalado o plugin WooCommerce e entrar em contato com [Abbiamo](https://www.abbiamolog.com).
 
 == Changelog ==
+
+= 1.0.4 =
+* Correção da versão do plugin com a documentação
 
 = 1.0.3 =
 * Atualização da documentação

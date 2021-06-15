@@ -3,7 +3,7 @@
  * Plugin Name: Abbiamolog Shipping
  * Plugin URI: https://www.abbiamolog.com
  * Description: Abbiamolog Shipping Module for WooCommerce 3 & 4
- * Version: 1.0.2
+ * Version: 1.0.4
  * Author: Abbiamo
  * Author URI: https://www.abbiamolog.com
  *
