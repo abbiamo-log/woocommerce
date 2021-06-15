@@ -4,7 +4,7 @@ Contributors: devabbiamo
 Tags: shipping, delivery, woocommerce
 License: GPLv2 or later
 Tested up to: 5.7
-Stable tag: 1.0.1
+Stable tag: 1.0.3
 Requires PHP: 5.6
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -31,9 +31,12 @@ Requer WooCommerce 3.0 ou posterior para funcionar.
 
 = O que eu preciso para utilizar este plugin? =
 
-* Ter instalado o plugin WooCommerce e entrar em contanto com [Abbiamo](https://abbiamolog.com).
+* Ter instalado o plugin WooCommerce e entrar em contato com [Abbiamo](https://www.abbiamolog.com).
 
 == Changelog ==
+
+= 1.0.3 =
+* Atualização da documentação
 
 = 1.0.2 =
 * Corrigido problema de enviar pedidos para sandbox
@@ -50,15 +53,5 @@ Requer WooCommerce 3.0 ou posterior para funcionar.
 
 == Upgrade Notice ==
 
-= 1.0.2 =
-* Corrigido problema de enviar pedidos para sandbox
-
-= 1.0.1 =
-* Corrigido problema de host não encontrado
-
 = 1.0.0 =
 * Corrigido problema do amount quando é adicionado valor com mais de 2 casa decimais
-
-= 0.0.4 =
-* Adicionado modo sandbox para testes
-* Adicionado na tela de pedidos o tracking
